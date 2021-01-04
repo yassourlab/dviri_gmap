@@ -1,0 +1,1089 @@
+sampleID	sample_time	record_id	visit_age_mo	diet	diet0mo	symptoms	mode_of_delivery	gender	race_final	probiotics_firstyr	antacid_ppi_firstyr	antacid_h2_firstyr	antacid_firstyr	age_ap_resolution_day	age_diag_ap_day	age_sx_onset_day	case_id	ever_formula	gestational_age	antibiotics_during_delivery
+sub.29.2.one.month	onemonth	29	0.9	Partially BF	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.31.0.initial	initial	31	0.1	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.20.0.initial	initial	20	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.20.1.two.week	twoweek	20	0.7	Exclusively BF	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.46.2.one.month	onemonth	46	1.1	Partially BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.31.1.two.week	twoweek	31	0.5	Partially BF	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.24.2.one.month	onemonth	24	1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.2.1.two.week	twoweek	2	0.4	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.2.2.one.month	onemonth	2	1.1	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.58.2.one.month	onemonth	58	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.78.1.two.week	twoweek	78	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.57.2.one.month	onemonth	57	1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.55.2.one.month	onemonth	55	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.67.1.two.week	twoweek	67	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.45.3.twomonth	twomonth	45	2.1	Exclusively BF	Exclusively BF	NA	Vaginal	Female	Multiple Race	0	0	0	0	224	189	189	NA	1	>37WGA	NA
+sub.24.3.twomonth	twomonth	24	2.1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.78.0.initial	initial	78	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.31.2.one.month	onemonth	31	1.2	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.46.3.twomonth	twomonth	46	1.8	Exclusively BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.2.3.twomonth	twomonth	2	2	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.57.1.two.week	twoweek	57	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.58.1.two.week	twoweek	58	0.4	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.67.0.initial	initial	67	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.53.3.twomonth	twomonth	53	2	Partially BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.58.0.initial	initial	58	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.55.1.two.week	twoweek	55	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.110.0.initial	initial	110	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.99.1.two.week	twoweek	99	0.4	Exclusively BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.84.0.initial	initial	84	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.84.2.one.month	onemonth	84	0.8	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.97.1.two.week	twoweek	97	0.7	Exclusively BF	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.111.0.initial	initial	111	0.2	Partially BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.20.3.twomonth	twomonth	20	1.8	Exclusively BF	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.78.2.one.month	onemonth	78	1.1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.31.3.twomonth	twomonth	31	2.3	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.67.2.one.month	onemonth	67	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.99.0.initial	initial	99	0.2	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.29.3.twomonth	twomonth	29	2.1	Exclusively BF	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.111.1.two.week	twoweek	111	0.4	Exclusively BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.97.0.initial	initial	97	0.2	Partially BF	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.84.1.two.week	twoweek	84	0.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.96.2.one.month	onemonth	96	1.1	Formula	Formula	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.99.2.one.month	onemonth	99	1.1	Exclusively BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.67.3.twomonth	twomonth	67	2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.139.0.initial	initial	139	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.46.4.fourmonth	fourmonth	46	4.1	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.53.4.fourmonth	fourmonth	53	4.3	Partially BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.110.1.two.week	twoweek	110	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.55.3.twomonth	twomonth	55	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.58.3.twomonth	twomonth	58	2.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.110.3.twomonth	twomonth	110	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.31.4.fourmonth	fourmonth	31	4.1	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.57.4.fourmonth	fourmonth	57	4.2	Partially BF	Exclusively BF	Symptomatic	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.149.2.one.month	onemonth	149	1	Partially BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.162.1.two.week	twoweek	162	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.162.0.initial	initial	162	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.134.2.one.month	onemonth	134	1.4	Formula	Partially BF	Control	C-section	Male	Other	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.165.1.two.week	twoweek	165	0.5	Formula	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.111.3.twomonth	twomonth	111	2.2	Exclusively BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.58.4.fourmonth	fourmonth	58	4.1	Formula	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.139.2.one.month	onemonth	139	1.1	Partially BF	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.84.3.twomonth	twomonth	84	2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.134.1.two.week	twoweek	134	0.7	Formula	Partially BF	Control	C-section	Male	Other	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.99.3.twomonth	twomonth	99	2	Exclusively BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.139.1.two.week	twoweek	139	0.4	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.45.4.fourmonth	fourmonth	45	4.1	Exclusively BF	Exclusively BF	NA	Vaginal	Female	Multiple Race	0	0	0	0	224	189	189	NA	1	>37WGA	NA
+sub.165.0.initial	initial	165	0.3	Formula	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.20.4.fourmonth	fourmonth	20	3.9	Exclusively BF	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.96.3.twomonth	twomonth	96	2.1	Formula	Formula	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.97.3.twomonth	twomonth	97	2.1	Partially BF	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.29.4.fourmonth	fourmonth	29	4	Formula	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.78.3.twomonth	twomonth	78	2.1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.149.3.twomonth	twomonth	149	2	Partially BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.78.4.fourmonth	fourmonth	78	4.1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.67.4.fourmonth	fourmonth	67	4.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.197.0.initial	initial	197	0.2	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.188.1.two.week	twoweek	188	0.4	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.184.1.two.week	twoweek	184	0.6	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	0	0	0	0	61	30	28	AP Case	2	>37WGA	No
+sub.164.2.one.month	onemonth	164	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.134.3.twomonth	twomonth	134	2.1	Formula	Partially BF	Control	C-section	Male	Other	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.2.5.sixmonth	sixmonth	2	6.1	Formula	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.781.1.two.week	twoweek	781	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.439.20.sick	sick	439	10.8	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.659.4.fourmonth	fourmonth	659	3.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.782.1.two.week	twoweek	782	0.4	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.758.2.one.month	onemonth	758	1.3	Partially BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.439.21.sick	sick	439	10.9	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.666.4.fourmonth	fourmonth	666	4	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.526.20.sick	sick	526	8	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.781.11.sick	sick	781	0.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.669.4.fourmonth	fourmonth	669	3.9	Formula	Formula	Resolved	Vaginal	Female	White	1	0	1	1	62	33	15	AP Case	NA	>37WGA	No
+sub.554.20.sick	sick	554	7.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.665.4.fourmonth	fourmonth	665	4.1	Exclusively BF	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.728.3.twomonth	twomonth	728	1.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.484.6.ninemonth	ninemonth	484	9.5	No information	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.652.11.sick	sick	652	4.4	Partially BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.738.3.twomonth	twomonth	738	1.8	Formula	Formula	Control	Vaginal	Male	NA	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.671.4.fourmonth	fourmonth	671	4	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.790.11.sick	sick	790	0.9	Partially BF	Partially BF	Symptomatic	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.554.23.sick	sick	554	7.5	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.728.13.sick	sick	728	2.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.571.5.sixmonth	sixmonth	571	7	NA	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.777.2.one.month	onemonth	777	0.9	Formula	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.733.3.twomonth	twomonth	733	2.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	0	0	0	0	198	33	14	AP Case	NA	>37WGA	Yes
+sub.670.4.fourmonth	fourmonth	670	4.2	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.782.2.one.month	onemonth	782	0.9	Partially BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.781.2.one.month	onemonth	781	0.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.731.3.twomonth	twomonth	731	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.676.4.fourmonth	fourmonth	676	4.2	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.408.7.one.year	oneyear	408	12.1	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.790.2.one.month	onemonth	790	1.3	Partially BF	Partially BF	Symptomatic	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.728.11.sick	sick	728	2.6	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.470.14.sick	sick	470	10.5	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.397.7.one.year	oneyear	397	12.5	No information	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.782.12.sick	sick	782	1.3	Partially BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.760.3.twomonth	twomonth	760	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.749.3.twomonth	twomonth	749	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.782.13.sick	sick	782	1.4	Partially BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.585.17.sick	sick	585	7.1	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.554.21.sick	sick	554	8.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.728.12.sick	sick	728	2.7	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.782.14.sick	sick	782	1.5	Partially BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.615.5.sixmonth	sixmonth	615	6.2	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.526.21.sick	sick	526	8.9	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.758.3.twomonth	twomonth	758	2.4	Partially BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.793.2.one.month	onemonth	793	1.1	Partially BF	Partially BF	Pre-symptoms	Vaginal	Male	Asian	1	0	0	0	118	62	34	AP Case	NA	33-37WGA	Yes
+sub.533.12.sick	sick	533	9.2	No information	Partially BF	Resolved	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.524.11.sick	sick	524	9.2	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.692.4.fourmonth	fourmonth	692	4.1	Formula	Formula	Symptomatic	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.410.7.one.year	oneyear	410	12.7	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.439.7.one.year	oneyear	439	12.1	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.422.7.one.year	oneyear	422	12.3	No information	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.782.15.sick	sick	782	1.8	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.571.17.sick	sick	571	8	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.695.4.fourmonth	fourmonth	695	4.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	1	1	126	73	28	AP Case	2	>37WGA	Yes
+sub.436.7.one.year	oneyear	436	12.2	No information	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.781.13.sick	sick	781	1.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.604.5.sixmonth	sixmonth	604	7	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	0	0	0	0	63	49	48	AP Case	NA	>37WGA	Yes
+sub.526.6.ninemonth	ninemonth	526	9.4	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.438.7.one.year	oneyear	438	12.3	No information	Partially BF	Control	Vaginal	Male	White	1	0	1	1	NA	NA	6	No AP	1	>37WGA	No
+sub.431.7.one.year	oneyear	431	12.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.630.5.sixmonth	sixmonth	630	6.2	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.781.3.twomonth	twomonth	781	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.782.3.twomonth	twomonth	782	2	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.394.7.one.year	oneyear	394	13.3	No information	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.535.6.ninemonth	ninemonth	535	9.3	No information	Partially BF	Resolved	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.554.24.sick	sick	554	8.7	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.709.4.fourmonth	fourmonth	709	4	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.782.16.sick	sick	782	2.2	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.790.3.twomonth.1	twomonth	790	2.1	Exclusively BF	Partially BF	Symptomatic	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.790.3.twomonth.2	twomonth	790	2.1	Exclusively BF	Partially BF	Symptomatic	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.526.22.sick	sick	526	9.7	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.708.4.fourmonth	fourmonth	708	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.554.22.sick	sick	554	8.9	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.670.11.sick	sick	670	5.7	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.527.6.ninemonth	ninemonth	527	9.8	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.793.3.twomonth	twomonth	793	2	Formula	Partially BF	Symptomatic	Vaginal	Male	Asian	1	0	0	0	118	62	34	AP Case	NA	33-37WGA	Yes
+sub.652.5.sixmonth	sixmonth	652	6.2	Partially BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.615.18.sick	sick	615	7.2	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.554.6.ninemonth	ninemonth	554	9.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.655.5.sixmonth	sixmonth	655	6.2	NA	Exclusively BF	Resolved	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.431.17.sick	sick	431	12.9	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.728.4.fourmonth	fourmonth	728	4	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.663.5.sixmonth	sixmonth	663	6.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	119	32	32	AP Case	2	>37WGA	No
+sub.657.5.sixmonth	sixmonth	657	6.4	NA	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.671.5.sixmonth	sixmonth	671	6	Formula	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.733.4.fourmonth	fourmonth	733	4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	0	0	0	0	198	33	14	AP Case	NA	>37WGA	Yes
+sub.692.12.sick	sick	692	5.2	Formula	Formula	Resolved	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.621.14.sick	sick	621	7.4	No information	Exclusively BF	Resolved	C-section	Male	Asian	1	0	0	0	126	93	82	AP Case	1	>37WGA	Yes
+sub.666.5.sixmonth	sixmonth	666	6.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.526.23.sick	sick	526	10.4	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.571.6.ninemonth	ninemonth	571	9.2	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.464.7.one.year	oneyear	464	12.4	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.781.14.sick	sick	781	3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.659.5.sixmonth	sixmonth	659	6.5	NA	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.526.24.sick	sick	526	10.5	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.667.13.sick	sick	667	6.7	NA	Partially BF	Resolved	C-section	Female	Asian	0	0	0	0	164	120	30	AP Case	1	>37WGA	Yes
+sub.735.4.fourmonth	fourmonth	735	4.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.676.5.sixmonth	sixmonth	676	6.2	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.470.7.one.year	oneyear	470	12.5	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.749.4.fourmonth	fourmonth	749	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.760.4.fourmonth	fourmonth	760	3.9	Formula	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.585.6.ninemonth	ninemonth	585	9	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.535.15.sick	sick	535	10.6	No information	Partially BF	Resolved	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.577.6.ninemonth	ninemonth	577	9.3	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	0	0	0	184	59	32	AP Case	2	>37WGA	No
+sub.643.15.sick	sick	643	7.5	No information	Formula	NA	C-section	Female	White	1	1	1	1	119	81	32	NA	1	33-37WGA	Yes
+sub.758.4.fourmonth	fourmonth	758	4.5	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.692.5.sixmonth	sixmonth	692	6.2	Formula	Formula	Resolved	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.711.4.fourmonth	fourmonth	711	5.6	NA	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.655.14.sick	sick	655	7.8	No information	Exclusively BF	Resolved	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.498.7.one.year	oneyear	498	12.6	No information	Partially BF	Control	Vaginal	Female	White	1	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.782.4.fourmonth	fourmonth	782	4.2	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.709.5.sixmonth	sixmonth	709	6.2	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.541.6.ninemonth	ninemonth	541	11.7	No information	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.639.6.ninemonth	ninemonth	639	8.6	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.708.5.sixmonth	sixmonth	708	6.4	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.729.5.sixmonth	sixmonth	729	6.2	Partially BF	Partially BF	Resolved	Vaginal	Male	White	1	1	1	1	62	27	20	AP Case	1	>37WGA	Yes
+sub.630.6.ninemonth	ninemonth	630	9.1	No information	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.728.5.sixmonth	sixmonth	728	6.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.535.7.one.year	oneyear	535	12.2	No information	Partially BF	Resolved	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.638.6.ninemonth	ninemonth	638	9.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	122	89	53	AP Case	NA	>37WGA	No
+sub.526.7.one.year	oneyear	526	12.5	No information	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.671.6.ninemonth	ninemonth	671	8.5	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.615.19.sick	sick	615	10	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.657.6.ninemonth	ninemonth	657	9	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.749.5.sixmonth	sixmonth	749	6.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.663.6.ninemonth	ninemonth	663	9.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	119	32	32	AP Case	2	>37WGA	No
+sub.667.6.ninemonth	ninemonth	667	9.3	No information	Partially BF	Resolved	C-section	Female	Asian	0	0	0	0	164	120	30	AP Case	1	>37WGA	Yes
+sub.659.6.ninemonth	ninemonth	659	9.2	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.666.6.ninemonth	ninemonth	666	9.3	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.554.7.one.year	oneyear	554	12.6	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.669.6.ninemonth	ninemonth	669	9.2	No information	Formula	Resolved	Vaginal	Female	White	1	0	1	1	62	33	15	AP Case	NA	>37WGA	No
+sub.615.20.sick	sick	615	10.7	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.790.5.sixmonth	sixmonth	790	6.2	NA	Partially BF	Resolved	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.571.7.one.year	oneyear	571	12.3	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.676.6.ninemonth	ninemonth	676	9.2	No information	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.758.5.sixmonth	sixmonth	758	7	Exclusively BF	Partially BF	Resolved	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.670.6.ninemonth	ninemonth	670	9.7	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.781.5.sixmonth	sixmonth	781	6.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	1	0	1	194	27	17	AP Case	2	>37WGA	No
+sub.760.5.sixmonth	sixmonth	760	7	Formula	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.585.7.one.year	oneyear	585	12.3	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.695.6.ninemonth	ninemonth	695	8.9	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	126	73	28	AP Case	2	>37WGA	Yes
+sub.665.17.sick	sick	665	10.3	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.615.21.sick	sick	615	11.8	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.585.19.sick	sick	585	12.7	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.665.19.sick	sick	665	10.8	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.665.18.sick	sick	665	10.8	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.716.6.ninemonth	ninemonth	716	9.1	No information	Formula	Symptomatic	C-section	Female	Black	1	0	1	1	278	63	15	AP Case	1	>37WGA	Yes
+sub.615.7.one.year	oneyear	615	12.3	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.733.6.ninemonth	ninemonth	733	8.8	No information	Exclusively BF	Resolved	Vaginal	Male	White	0	0	0	0	198	33	14	AP Case	NA	>37WGA	Yes
+sub.692.13.sick	sick	692	10	No information	Formula	Resolved	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.728.6.ninemonth	ninemonth	728	9	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.793.5.sixmonth	sixmonth	793	7.6	No information	Partially BF	Resolved	Vaginal	Male	Asian	1	0	0	0	118	62	34	AP Case	NA	33-37WGA	Yes
+sub.708.11.sick	sick	708	9.9	No information	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.615.22.sick	sick	615	12.9	No information	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.728.16.sick	sick	728	9.5	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.639.7.one.year	oneyear	639	12.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.670.12.sick	sick	670	11.6	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.728.17.sick	sick	728	9.7	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.735.6.ninemonth	ninemonth	735	9.6	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.652.7.one.year	oneyear	652	12.3	No information	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.663.7.one.year	oneyear	663	12.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	119	32	32	AP Case	2	>37WGA	No
+sub.671.7.one.year	oneyear	671	12.2	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.666.7.one.year	oneyear	666	12.3	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.665.7.one.year	oneyear	665	12.5	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.758.6.ninemonth	ninemonth	758	9.8	No information	Partially BF	Resolved	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.777.6.ninemonth	ninemonth	777	9.1	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.782.6.ninemonth	ninemonth	782	9.1	No information	Partially BF	Resolved	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.676.7.one.year	oneyear	676	12.2	No information	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.686.7.one.year	oneyear	686	12.2	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	68	32	32	AP Case	1	>37WGA	No
+sub.716.12.sick	sick	716	11.2	No information	Formula	Resolved	C-section	Female	Black	1	0	1	1	278	63	15	AP Case	1	>37WGA	Yes
+sub.676.12.sick	sick	676	12.9	No information	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.692.7.one.year	oneyear	692	12.3	No information	Formula	Resolved	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.793.6.ninemonth	ninemonth	793	9.5	No information	Partially BF	Resolved	Vaginal	Male	Asian	1	0	0	0	118	62	34	AP Case	NA	33-37WGA	Yes
+sub.708.7.one.year	oneyear	708	12.2	No information	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.355.12.sick	sick	355	0.8	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.222.5.sixmonth	sixmonth	222	6.1	NA	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.355.11.sick	sick	355	0.3	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.278.4.fourmonth	fourmonth	278	4.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.278.5.sixmonth	sixmonth	278	6.4	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.278.15.sick	sick	278	8.6	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.272.14.sick	sick	272	5.5	Partially BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.272.5.sixmonth	sixmonth	272	6.6	Partially BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.267.12.sick	sick	267	5	Partially BF	Partially BF	Symptomatic	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.267.5.sixmonth	sixmonth	267	6.2	Partially BF	Partially BF	Resolved	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.310.15.sick	sick	310	5.5	NA	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.358.14.sick	sick	358	4.4	Formula	Partially BF	Resolved	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.16.5.sixmonth	sixmonth	16	6.2	Formula	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	156	111	34	AP Case	1	>37WGA	Yes
+sub.14.5.sixmonth	sixmonth	14	6.1	Formula	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.8.5.sixmonth	sixmonth	8	6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.13.5.sixmonth	sixmonth	13	6.6	Exclusively BF	Partially BF	Resolved	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.9.5.sixmonth	sixmonth	9	6.2	Exclusively BF	Partially BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.90.12.sick	sick	90	4.8	Formula	Exclusively BF	Resolved	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.94.11.sick	sick	94	5.4	Exclusively BF	Partially BF	Resolved	C-section	Female	Asian	1	0	0	0	113	95	94	AP Case	1	>37WGA	Yes
+sub.90.5.sixmonth	sixmonth	90	6.2	Formula	Exclusively BF	Resolved	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.60.5.sixmonth	sixmonth	60	6.3	NA	Formula	Resolved	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.347.5.sixmonth	sixmonth	347	6.4	NA	Exclusively BF	Resolved	Vaginal	Female	Asian	1	0	0	0	119	27	27	AP Case	1	>37WGA	Yes
+sub.222.11.sick	sick	222	1.7	Formula	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.89.11.sick	sick	89	5.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.316.5.sixmonth	sixmonth	316	6.6	Exclusively BF	Exclusively BF	Resolved	C-section	Male	Multiple Race	1	0	0	0	59	31	16	AP Case	2	>37WGA	Yes
+sub.367.5.sixmonth	sixmonth	367	6.3	Partially BF	Exclusively BF	Resolved	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.310.5.sixmonth	sixmonth	310	6.7	NA	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.144.5.sixmonth	sixmonth	144	6.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.367.3.twomonth	twomonth	367	1.9	Partially BF	Exclusively BF	Symptomatic	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.267.11.sick	sick	267	4.3	Partially BF	Partially BF	Symptomatic	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.249.4.fourmonth	fourmonth	249	4.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.97.2.one.month	onemonth	97	1.1	Exclusively BF	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.164.0.initial	initial	164	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.159.1.two.week	twoweek	159	0.4	Formula	Partially BF	Symptomatic	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.355.4.fourmonth	fourmonth	355	3.9	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.222.2.one.month	onemonth	222	1.1	Formula	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.90.4.fourmonth	fourmonth	90	4.1	Formula	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.222.3.twomonth	twomonth	222	2.2	Formula	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.159.3.twomonth	twomonth	159	1.9	Formula	Partially BF	Symptomatic	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.198.3.twomonth	twomonth	198	2	Exclusively BF	Exclusively BF	Resolved	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.278.11.sick	sick	278	1.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.144.11.sick	sick	144	4.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.267.0.initial	initial	267	0.1	Partially BF	Partially BF	Pre-symptoms	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.28.11.sick	sick	28	0.6	Formula	Formula	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	63	18	20	AP Case	NA	>37WGA	No
+sub.28.1.two.week	twoweek	28	0.4	Formula	Formula	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	63	18	20	AP Case	NA	>37WGA	No
+sub.14.0.initial	initial	14	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.8.2.one.month	onemonth	8	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.90.1.two.week	twoweek	90	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.89.1.two.week	twoweek	89	0.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.60.1.two.week	twoweek	60	0.4	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.13.2.one.month	onemonth	13	1.3	Exclusively BF	Partially BF	Symptomatic	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.28.2.one.month	onemonth	28	0.8	Formula	Formula	Symptomatic	Vaginal	Female	Asian	1	0	0	0	63	18	20	AP Case	NA	>37WGA	No
+sub.8.0.initial	initial	8	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.5.0.initial	initial	5	0.2	Formula	Formula	Pre-symptoms	Vaginal	Male	White	1	0	1	1	125	23	22	AP Case	NA	33-37WGA	Yes
+sub.8.1.two.week	twoweek	8	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.60.2.one.month	onemonth	60	0.9	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.5.3.twomonth	twomonth	5	1.8	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	1	1	125	23	22	AP Case	NA	33-37WGA	Yes
+sub.5.2.one.month	onemonth	5	0.9	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	1	1	125	23	22	AP Case	NA	33-37WGA	Yes
+sub.144.0.initial	initial	144	0.3	Partially BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.9.0.initial	initial	9	0.2	Partially BF	Partially BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.60.0.initial	initial	60	0.2	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.13.0.initial	initial	13	0.7	Exclusively BF	Partially BF	Pre-symptoms	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.89.0.initial	initial	89	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.28.3.twomonth	twomonth	28	2.1	Formula	Formula	Resolved	Vaginal	Female	Asian	1	0	0	0	63	18	20	AP Case	NA	>37WGA	No
+sub.94.1.two.week	twoweek	94	0.5	Exclusively BF	Partially BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	113	95	94	AP Case	1	>37WGA	Yes
+sub.14.3.twomonth	twomonth	14	2	Partially BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.60.3.twomonth	twomonth	60	2	Formula	Formula	Resolved	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.94.2.one.month	onemonth	94	1	Exclusively BF	Partially BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	113	95	94	AP Case	1	>37WGA	Yes
+sub.60.4.fourmonth	fourmonth	60	4.1	Formula	Formula	Resolved	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.94.3.twomonth	twomonth	94	2.1	Exclusively BF	Partially BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	113	95	94	AP Case	1	>37WGA	Yes
+sub.5.4.fourmonth	fourmonth	5	4.1	Formula	Formula	Symptomatic	Vaginal	Male	White	1	0	1	1	125	23	22	AP Case	NA	33-37WGA	Yes
+sub.89.3.twomonth	twomonth	89	2.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.144.1.two.week	twoweek	144	0.4	Partially BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.14.4.fourmonth	fourmonth	14	4.1	Formula	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.9.4.fourmonth	fourmonth	9	4	Exclusively BF	Partially BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.13.3.twomonth	twomonth	13	1.8	Exclusively BF	Partially BF	Symptomatic	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.355.3.twomonth	twomonth	355	1.9	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.272.4.fourmonth	fourmonth	272	4.1	Partially BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.358.3.twomonth	twomonth	358	2	Formula	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.310.14.sick	sick	310	3	Exclusively BF	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.358.12.sick	sick	358	1.5	Formula	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.367.12.sick	sick	367	1.2	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.376.2.one.month	onemonth	376	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.358.13.sick	sick	358	1.3	Formula	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.310.3.twomonth	twomonth	310	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.376.1.two.week	twoweek	376	0.5	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.358.2.one.month	onemonth	358	0.9	Formula	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.316.11.sick	sick	316	1.5	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	Multiple Race	1	0	0	0	59	31	16	AP Case	2	>37WGA	Yes
+sub.347.2.one.month	onemonth	347	0.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	Asian	1	0	0	0	119	27	27	AP Case	1	>37WGA	Yes
+sub.355.1.two.week	twoweek	355	0.5	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.16.2.one.month	onemonth	16	1.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	1	0	0	0	156	111	34	AP Case	1	>37WGA	Yes
+sub.272.11.sick	sick	272	2.3	Partially BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.310.12.sick	sick	310	1.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.278.3.twomonth	twomonth	278	2.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.358.0.initial	initial	358	0.2	Partially BF	Partially BF	Pre-symptoms	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.347.1.two.week	twoweek	347	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	119	27	27	AP Case	1	>37WGA	Yes
+sub.358.11.sick	sick	358	0.6	Formula	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.376.0.initial	initial	376	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.310.2.one.month	onemonth	310	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.267.3.twomonth	twomonth	267	2	Exclusively BF	Partially BF	Symptomatic	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.198.4.fourmonth	fourmonth	198	4.1	Exclusively BF	Exclusively BF	Resolved	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.310.11.sick	sick	310	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.222.4.fourmonth	fourmonth	222	4.1	Formula	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.307.1.two.week	twoweek	307	0.4	Exclusively BF	Partially BF	Pre-symptoms	C-section	Female	Multiple Race	1	0	1	1	59	31	31	AP Case	1	>37WGA	Yes
+sub.198.0.initial	initial	198	0.3	Formula	Exclusively BF	Pre-symptoms	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.272.12.sick	sick	272	2.4	Partially BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.272.2.one.month	onemonth	272	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.310.1.two.week	twoweek	310	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.307.0.initial	initial	307	0.2	Partially BF	Partially BF	Pre-symptoms	C-section	Female	Multiple Race	1	0	1	1	59	31	31	AP Case	1	>37WGA	Yes
+sub.278.1.two.week	twoweek	278	0.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.198.2.one.month	onemonth	198	1.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.159.4.fourmonth	fourmonth	159	4.2	Formula	Partially BF	Symptomatic	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.222.1.two.week	twoweek	222	0.4	Formula	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.89.4.fourmonth	fourmonth	89	4.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.272.13.sick	sick	272	3	Partially BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.278.0.initial	initial	278	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	1	125	34	4	AP Case	1	33-37WGA	No
+sub.222.0.initial	initial	222	0.2	Partially BF	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.144.3.twomonth	twomonth	144	1.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.198.1.two.week	twoweek	198	0.5	Formula	Exclusively BF	Symptomatic	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.13.4.fourmonth	fourmonth	13	4.1	Exclusively BF	Partially BF	Symptomatic	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.90.3.twomonth	twomonth	90	2.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.159.12.sick	sick	159	2.4	Formula	Partially BF	Symptomatic	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.89.2.one.month	onemonth	89	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.272.1.two.week	twoweek	272	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.2.4.fourmonth	fourmonth	2	4.1	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.192.0.initial	initial	192	0.1	Partially BF	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.110.2.one.month	onemonth	110	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.179.1.two.week	twoweek	179	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.188.2.one.month	onemonth	188	1.3	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.205.1.two.week	twoweek	205	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.192.2.one.month	onemonth	192	0.9	Partially BF	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.197.2.one.month	onemonth	197	0.9	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.192.1.two.week	twoweek	192	0.5	Partially BF	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.197.1.two.week	twoweek	197	0.4	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.97.4.fourmonth	fourmonth	97	3.9	Exclusively BF	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.57.11.sick	sick	57	5.3	Formula	Exclusively BF	Symptomatic	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.205.0.initial	initial	205	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.45.5.sixmonth	sixmonth	45	6.2	Partially BF	Exclusively BF	NA	Vaginal	Female	Multiple Race	0	0	0	0	224	189	189	NA	1	>37WGA	NA
+sub.46.5.sixmonth	sixmonth	46	6.3	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.84.4.fourmonth	fourmonth	84	4	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.24.5.sixmonth	sixmonth	24	6.7	Partially BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.179.2.one.month	onemonth	179	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.184.2.one.month	onemonth	184	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	0	0	0	0	61	30	28	AP Case	2	>37WGA	No
+sub.139.3.twomonth	twomonth	139	2.6	Partially BF	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.164.3.twomonth	twomonth	164	1.9	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.96.4.fourmonth	fourmonth	96	4	Formula	Formula	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.111.2.one.month	onemonth	111	1.1	Exclusively BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.31.5.sixmonth	sixmonth	31	6.1	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.165.3.twomonth	twomonth	165	1.9	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.209.1.two.week	twoweek	209	0.5	Partially BF	Exclusively BF	Control	C-section	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.20.5.sixmonth	sixmonth	20	6.5	Partially BF	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.228.3.twomonth	twomonth	228	1.9	Exclusively BF	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	57	21	21	AP Case	2	33-37WGA	Yes
+sub.226.0.initial	initial	226	0.2	Formula	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.162.3.twomonth	twomonth	162	2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.225.0.initial	initial	225	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.111.4.fourmonth	fourmonth	111	4	Exclusively BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.209.2.one.month	onemonth	209	1	Exclusively BF	Exclusively BF	Control	C-section	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.2.11.sick	sick	2	7.7	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.237.1.two.week	twoweek	237	0.5	Formula	Formula	Pre-symptoms	Vaginal	Male	White	1	1	0	1	70	33	33	AP Case	1	>37WGA	No
+sub.247.0.initial	initial	247	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.29.5.sixmonth	sixmonth	29	6.7	Formula	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.57.5.sixmonth	sixmonth	57	6.1	Formula	Exclusively BF	Symptomatic	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.188.3.twomonth	twomonth	188	2	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.233.0.initial	initial	233	0.5	Partially BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.246.1.two.week	twoweek	246	0.6	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	0	0	0	0	195	104	100	AP Case	NA	>37WGA	Yes
+sub.99.4.fourmonth	fourmonth	99	4.7	Exclusively BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.179.3.twomonth	twomonth	179	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.134.4.fourmonth	fourmonth	134	4.1	Formula	Partially BF	Control	C-section	Male	Other	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.110.4.fourmonth	fourmonth	110	4.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.205.2.one.month	onemonth	205	1.1	Partially BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.225.2.one.month	onemonth	225	1	Partially BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.197.3.twomonth	twomonth	197	2	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.249.0.initial	initial	249	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.226.2.one.month	onemonth	226	1.4	Formula	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.246.2.one.month	onemonth	246	1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	0	0	0	0	195	104	100	AP Case	NA	>37WGA	Yes
+sub.67.5.sixmonth	sixmonth	67	6.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.237.12.sick	sick	237	1.1	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	0	1	70	33	33	AP Case	1	>37WGA	No
+sub.233.2.one.month	onemonth	233	1	Partially BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.209.3.twomonth	twomonth	209	2.1	Exclusively BF	Exclusively BF	Control	C-section	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.55.5.sixmonth	sixmonth	55	6.5	Partially BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.260.0.initial	initial	260	0.4	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.205.3.twomonth	twomonth	205	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.78.5.sixmonth	sixmonth	78	6.4	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.162.11.sick	sick	162	3.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.247.2.one.month	onemonth	247	0.9	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.249.1.two.week	twoweek	249	0.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.29.11.sick	sick	29	7.6	No information	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.139.4.fourmonth	fourmonth	139	4.3	Partially BF	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.247.11.sick	sick	247	1.3	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.249.2.one.month	onemonth	249	0.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.273.0.initial	initial	273	0.3	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.226.3.twomonth	twomonth	226	2.2	Formula	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.275.0.initial	initial	275	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.162.4.fourmonth	fourmonth	162	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.2.12.sick	sick	2	8.9	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.164.4.fourmonth	fourmonth	164	4.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.97.5.sixmonth	sixmonth	97	6.4	NA	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.96.5.sixmonth	sixmonth	96	6.3	Formula	Formula	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.165.4.fourmonth	fourmonth	165	4.4	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.99.5.sixmonth	sixmonth	99	6.3	Exclusively BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.275.1.two.week	twoweek	275	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.271.0.initial	initial	271	0.6	Formula	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.24.6.ninemonth	ninemonth	24	9	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.111.5.sixmonth	sixmonth	111	6.1	Exclusively BF	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.237.3.twomonth	twomonth	237	2.1	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	0	1	70	33	33	AP Case	1	>37WGA	No
+sub.205.11.sick	sick	205	3.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.45.6.ninemonth	ninemonth	45	9.2	No information	Exclusively BF	NA	Vaginal	Female	Multiple Race	0	0	0	0	224	189	189	NA	1	>37WGA	NA
+sub.9.6.ninemonth	ninemonth	9	9.2	No information	Partially BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.280.0.initial	initial	280	0.4	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.2.6.ninemonth	ninemonth	2	9.5	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.179.4.fourmonth	fourmonth	179	4.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.16.6.ninemonth	ninemonth	16	9.7	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	156	111	34	AP Case	1	>37WGA	Yes
+sub.53.6.ninemonth	ninemonth	53	9.9	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.188.4.fourmonth	fourmonth	188	4	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.271.2.one.month	onemonth	271	1.1	Formula	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.247.3.twomonth	twomonth	247	2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.233.3.twomonth	twomonth	233	2.2	Partially BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.8.6.ninemonth	ninemonth	8	9	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.273.2.one.month	onemonth	273	1	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.299.0.initial	initial	299	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.246.3.twomonth	twomonth	246	2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	0	0	0	0	195	104	100	AP Case	NA	>37WGA	Yes
+sub.290.2.one.month	onemonth	290	0.9	Partially BF	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.282.0.initial	initial	282	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	White	1	0	1	1	190	30	30	AP Case	1	>37WGA	Yes
+sub.275.2.one.month	onemonth	275	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.184.4.fourmonth	fourmonth	184	4.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	0	0	0	0	61	30	28	AP Case	2	>37WGA	No
+sub.110.5.sixmonth	sixmonth	110	6.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.192.4.fourmonth	fourmonth	192	4	Partially BF	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.282.2.one.month	onemonth	282	1	Partially BF	Exclusively BF	Symptomatic	C-section	Male	White	1	0	1	1	190	30	30	AP Case	1	>37WGA	Yes
+sub.237.11.sick	sick	237	2.8	Formula	Formula	Resolved	Vaginal	Male	White	1	1	0	1	70	33	33	AP Case	1	>37WGA	No
+sub.14.6.ninemonth	ninemonth	14	9.4	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.249.3.twomonth	twomonth	249	2.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.205.4.fourmonth	fourmonth	205	3.7	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.20.6.ninemonth	ninemonth	20	9.2	No information	Exclusively BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.309.1.two.week	twoweek	309	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.29.6.ninemonth	ninemonth	29	9.1	No information	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.299.1.two.week	twoweek	299	0.7	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.312.0.initial	initial	312	0.5	Partially BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.31.6.ninemonth	ninemonth	31	9.2	No information	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.321.0.initial	initial	321	0.3	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.2.13.sick	sick	2	10.2	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.209.4.fourmonth	fourmonth	209	3.9	Exclusively BF	Exclusively BF	Control	C-section	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.304.2.one.month	onemonth	304	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	159	32	29	AP Case	2	>37WGA	Yes
+sub.179.11.sick	sick	179	5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.149.5.sixmonth	sixmonth	149	6.3	Partially BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.309.2.one.month	onemonth	309	0.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.55.6.ninemonth	ninemonth	55	9	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.57.6.ninemonth	ninemonth	57	9.1	No information	Exclusively BF	Resolved	C-section	Male	White	1	0	0	0	185	37	36	AP Case	1	>37WGA	Yes
+sub.275.3.twomonth	twomonth	275	2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.290.3.twomonth	twomonth	290	1.9	Partially BF	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.273.3.twomonth	twomonth	273	2.3	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.2.14.sick	sick	2	10.7	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.312.2.one.month	onemonth	312	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.304.11.sick	sick	304	1.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	159	32	29	AP Case	2	>37WGA	Yes
+sub.179.12.sick	sick	179	5.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.60.6.ninemonth	ninemonth	60	9.1	No information	Formula	Resolved	Vaginal	Male	White	1	0	0	0	60	28	5	AP Case	1	>37WGA	No
+sub.165.5.sixmonth	sixmonth	165	6.1	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.226.4.fourmonth	fourmonth	226	4.1	Formula	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.321.2.one.month	onemonth	321	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.282.3.twomonth	twomonth	282	2.1	Partially BF	Exclusively BF	Symptomatic	C-section	Male	White	1	0	1	1	190	30	30	AP Case	1	>37WGA	Yes
+sub.304.12.sick	sick	304	1.5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	159	32	29	AP Case	2	>37WGA	Yes
+sub.233.4.fourmonth	fourmonth	233	3.9	Partially BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.280.3.twomonth	twomonth	280	2.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.247.12.sick	sick	247	3.6	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.360.0.initial	initial	360	0.4	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.304.3.twomonth	twomonth	304	1.8	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	159	32	29	AP Case	2	>37WGA	Yes
+sub.299.3.twomonth	twomonth	299	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.246.4.fourmonth	fourmonth	246	4	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	0	0	0	0	195	104	100	AP Case	NA	>37WGA	Yes
+sub.2.15.sick	sick	2	11.4	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.188.5.sixmonth	sixmonth	188	6	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.2.16.sick	sick	2	11.5	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.78.6.ninemonth	ninemonth	78	9.5	No information	Exclusively BF	Symptomatic	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.179.5.sixmonth	sixmonth	179	6.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.370.1.two.week	twoweek	370	0.4	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.90.6.ninemonth	ninemonth	90	9.1	No information	Exclusively BF	Resolved	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.384.0.initial	initial	384	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.309.3.twomonth	twomonth	309	2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.360.2.one.month	onemonth	360	0.9	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.53.7.one.year	oneyear	53	12.2	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.384.11.sick	sick	384	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.89.12.sick	sick	89	9.2	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.94.6.ninemonth	ninemonth	94	9.2	No information	Partially BF	Resolved	C-section	Female	Asian	1	0	0	0	113	95	94	AP Case	1	>37WGA	Yes
+sub.321.3.twomonth	twomonth	321	1.9	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.16.7.one.year	oneyear	16	12.2	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	156	111	34	AP Case	1	>37WGA	Yes
+sub.8.7.one.year	oneyear	8	11.5	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	0	1	1	184	127	20	AP Case	2	>37WGA	Yes
+sub.237.4.fourmonth	fourmonth	237	4.8	Formula	Formula	Resolved	Vaginal	Male	White	1	1	0	1	70	33	33	AP Case	1	>37WGA	No
+sub.364.2.one.month	onemonth	364	1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.394.0.initial	initial	394	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.162.5.sixmonth	sixmonth	162	7	NA	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.192.5.sixmonth	sixmonth	192	6.1	Partially BF	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.260.4.fourmonth	fourmonth	260	4.1	Partially BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.247.4.fourmonth	fourmonth	247	5	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.394.1.two.week	twoweek	394	0.4	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.179.13.sick	sick	179	6.7	Exclusively BF	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.110.6.ninemonth	ninemonth	110	9.2	No information	Exclusively BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.349.3.twomonth	twomonth	349	1.7	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	0	1	1	89	34	28	AP Case	1	>37WGA	Yes
+sub.46.7.one.year	oneyear	46	12.2	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.111.6.ninemonth	ninemonth	111	9.3	No information	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.90.13.sick	sick	90	9.9	No information	Exclusively BF	Resolved	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.394.11.sick	sick	394	0.7	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.197.5.sixmonth	sixmonth	197	6.5	Partially BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.273.4.fourmonth	fourmonth	273	4	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.410.1.two.week	twoweek	410	0.3	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.13.7.one.year	oneyear	13	12.4	No information	Partially BF	Resolved	C-section	Male	White	1	1	1	1	174	130	34	AP Case	1	33-37WGA	Yes
+sub.16.12.sick	sick	16	12.9	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	156	111	34	AP Case	1	>37WGA	Yes
+sub.397.2.one.month	onemonth	397	0.8	Exclusively BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.384.2.one.month	onemonth	384	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.2.17.sick	sick	2	12.6	No information	Formula	Resolved	Vaginal	Female	White	1	0	0	0	153	11	8	AP Case	1	>37WGA	No
+sub.424.0.initial	initial	424	0.5	Exclusively BF	Partially BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.290.4.fourmonth	fourmonth	290	4	Partially BF	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.431.0.initial	initial	431	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.394.2.one.month	onemonth	394	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.45.7.one.year	oneyear	45	12.6	No information	Exclusively BF	NA	Vaginal	Female	Multiple Race	0	0	0	0	224	189	189	NA	1	>37WGA	NA
+sub.247.13.sick	sick	247	5.4	NA	Exclusively BF	Symptomatic	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.14.7.one.year	oneyear	14	12.1	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.271.4.fourmonth	fourmonth	271	4.3	Formula	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.360.3.twomonth	twomonth	360	2	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.225.5.sixmonth	sixmonth	225	6	Partially BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.439.0.initial	initial	439	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.436.0.initial	initial	436	0.2	Partially BF	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.438.0.initial	initial	438	0.2	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	1	1	NA	NA	6	No AP	1	>37WGA	No
+sub.370.3.twomonth	twomonth	370	1.8	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.434.0.initial	initial	434	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	189	124	34	AP Case	2	>37WGA	No
+sub.144.6.ninemonth	ninemonth	144	9.1	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.9.7.one.year	oneyear	9	12.6	No information	Partially BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.439.1.two.week	twoweek	439	0.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.408.2.one.month	onemonth	408	1.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.222.12.sick	sick	222	6.4	NA	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.438.1.two.week	twoweek	438	0.4	Exclusively BF	Partially BF	Control	Vaginal	Male	White	1	0	1	1	NA	NA	6	No AP	1	>37WGA	No
+sub.436.1.two.week	twoweek	436	0.4	Exclusively BF	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.429.1.two.week	twoweek	429	0.5	Partially BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.233.5.sixmonth	sixmonth	233	6	Exclusively BF	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.440.1.two.week	twoweek	440	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.427.0.initial	initial	427	0.6	Partially BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.139.6.ninemonth	ninemonth	139	9.2	No information	Exclusively BF	Control	Vaginal	Male	Other	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.410.2.one.month	onemonth	410	1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.364.3.twomonth	twomonth	364	2.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.416.0.initial	initial	416	0.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.434.1.two.week	twoweek	434	0.6	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	189	124	34	AP Case	2	>37WGA	No
+sub.431.1.two.week	twoweek	431	0.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.422.0.initial	initial	422	0.8	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.405.0.initial	initial	405	3.2	Formula	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.304.4.fourmonth	fourmonth	304	3.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	159	32	29	AP Case	2	>37WGA	Yes
+sub.226.5.sixmonth	sixmonth	226	6.7	Formula	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.29.7.one.year	oneyear	29	12.3	No information	Partially BF	Resolved	C-section	Male	White	1	0	0	0	17	14	7	AP Case	1	>37WGA	Yes
+sub.454.0.initial	initial	454	0.2	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.439.11.sick	sick	439	0.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.384.3.twomonth	twomonth	384	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.454.1.two.week	twoweek	454	0.4	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.427.2.one.month	onemonth	427	1	Partially BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.439.2.one.month	onemonth	439	0.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.436.2.one.month	onemonth	436	1.1	Exclusively BF	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.159.6.ninemonth	ninemonth	159	9	No information	Partially BF	Resolved	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.397.3.twomonth	twomonth	397	1.9	Exclusively BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.434.2.one.month	onemonth	434	1.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	189	124	34	AP Case	2	>37WGA	No
+sub.312.4.fourmonth	fourmonth	312	4.1	Partially BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.67.7.one.year	oneyear	67	12	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.321.4.fourmonth	fourmonth	321	3.9	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.188.6.ninemonth	ninemonth	188	8.4	No information	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.164.6.ninemonth	ninemonth	164	9.1	No information	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.471.0.initial	initial	471	0.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.440.2.one.month	onemonth	440	1.3	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.464.1.two.week	twoweek	464	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.249.5.sixmonth	sixmonth	249	6.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.222.13.sick	sick	222	7.4	No information	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.445.2.one.month	onemonth	445	1.1	Formula	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	62	22	15	AP Case	1	>37WGA	No
+sub.408.3.twomonth	twomonth	408	2.2	Exclusively BF	Exclusively BF	Resolved	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.222.15.sick	sick	222	7.5	No information	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.439.12.sick	sick	439	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.394.3.twomonth	twomonth	394	2.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.424.3.twomonth	twomonth	424	2	Partially BF	Partially BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.454.2.one.month	onemonth	454	1	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.470.1.two.week	twoweek	470	0.4	Partially BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.405.4.fourmonth	fourmonth	405	4.1	Formula	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.471.1.two.week	twoweek	471	0.5	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.162.6.ninemonth	ninemonth	162	9.3	No information	Exclusively BF	Control	Vaginal	Female	Black	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.78.7.one.year	oneyear	78	12.2	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	1	0	0	0	288	172	172	AP Case	2	>37WGA	Yes
+sub.454.11.sick	sick	454	1.2	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.438.11.sick	sick	438	1.7	Formula	Partially BF	Control	Vaginal	Male	White	1	0	1	1	NA	NA	6	No AP	1	>37WGA	No
+sub.179.6.ninemonth	ninemonth	179	8.9	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.247.5.sixmonth	sixmonth	247	7.1	No information	Exclusively BF	Resolved	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.422.3.twomonth	twomonth	422	2	Partially BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.222.14.sick	sick	222	7.9	No information	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.484.1.two.week	twoweek	484	0.5	Exclusively BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.90.7.one.year	oneyear	90	12.2	No information	Exclusively BF	Resolved	C-section	Female	White	1	1	1	1	126	84	33	AP Case	1	33-37WGA	Yes
+sub.470.11.sick	sick	470	0.9	Exclusively BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.273.5.sixmonth	sixmonth	273	6.2	NA	Exclusively BF	Symptomatic	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.431.3.twomonth	twomonth	431	1.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.271.5.sixmonth	sixmonth	271	6.2	NA	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.427.3.twomonth	twomonth	427	2.1	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.434.3.twomonth	twomonth	434	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	189	124	34	AP Case	2	>37WGA	No
+sub.440.3.twomonth	twomonth	440	2	Exclusively BF	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.349.4.fourmonth	fourmonth	349	4.1	Partially BF	Partially BF	Resolved	C-section	Female	White	1	0	1	1	89	34	28	AP Case	1	>37WGA	Yes
+sub.97.7.one.year	oneyear	97	12.1	No information	Partially BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.184.6.ninemonth	ninemonth	184	9.2	No information	Exclusively BF	Resolved	Vaginal	Male	White	0	0	0	0	61	30	28	AP Case	2	>37WGA	No
+sub.470.2.one.month	onemonth	470	1.1	Exclusively BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.431.11.sick	sick	431	2.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.405.12.sick	sick	405	4.8	Formula	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.475.2.one.month	onemonth	475	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.84.7.one.year	oneyear	84	12.4	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	55	32	11	AP Case	2	>37WGA	No
+sub.445.3.twomonth	twomonth	445	2	Formula	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	62	22	15	AP Case	1	>37WGA	No
+sub.370.11.sick	sick	370	3.9	Partially BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.290.5.sixmonth	sixmonth	290	6.3	NA	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.290.11.sick	sick	290	6.3	NA	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.198.6.ninemonth	ninemonth	198	9.1	No information	Exclusively BF	Resolved	C-section	Male	White	0	0	0	0	48	33	14	AP Case	2	>37WGA	Yes
+sub.364.4.fourmonth	fourmonth	364	4.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.111.7.one.year	oneyear	111	12.1	No information	Partially BF	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.484.2.one.month	onemonth	484	1	Exclusively BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.484.11.sick	sick	484	1	Exclusively BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.280.5.sixmonth	sixmonth	280	6.4	NA	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.89.13.sick	sick	89	12.7	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	199	34	9	AP Case	2	>37WGA	No
+sub.299.5.sixmonth	sixmonth	299	6	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.454.3.twomonth	twomonth	454	2.3	Formula	Formula	Symptomatic	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.273.11.sick	sick	273	7.2	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.464.3.twomonth	twomonth	464	2	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.470.3.twomonth	twomonth	470	1.8	Exclusively BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.309.5.sixmonth	sixmonth	309	6	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.247.15.sick	sick	247	8.3	No information	Exclusively BF	Resolved	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.290.12.sick	sick	290	6.9	NA	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.527.0.initial	initial	527	0.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.524.1.two.week	twoweek	524	0.4	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.475.3.twomonth	twomonth	475	2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.498.2.one.month	onemonth	498	1.4	Partially BF	Partially BF	Control	Vaginal	Female	White	1	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.96.7.one.year	oneyear	96	12.9	No information	Formula	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.405.5.sixmonth	sixmonth	405	5.9	NA	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.408.4.fourmonth	fourmonth	408	4	Exclusively BF	Exclusively BF	Resolved	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.225.6.ninemonth	ninemonth	225	9.3	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.144.12.sick	sick	144	12.1	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.535.0.initial	initial	535	0.2	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.533.0.initial	initial	533	0.7	Partially BF	Partially BF	Pre-symptoms	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.527.1.two.week	twoweek	527	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.511.2.one.month	onemonth	511	0.9	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.424.4.fourmonth	fourmonth	424	4	Formula	Partially BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.144.7.one.year	oneyear	144	12.3	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	0	0	0	0	94	46	46	AP Case	NA	>37WGA	No
+sub.535.1.two.week	twoweek	535	0.4	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.410.4.fourmonth	fourmonth	410	4.2	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.159.13.sick	sick	159	11.6	No information	Partially BF	Resolved	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.321.5.sixmonth	sixmonth	321	6.3	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.484.3.twomonth	twomonth	484	2.2	Exclusively BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.416.4.fourmonth	fourmonth	416	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.535.12.sick	sick	535	0.6	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.533.2.one.month	onemonth	533	1.1	Partially BF	Partially BF	Symptomatic	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.524.2.one.month	onemonth	524	1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.527.2.one.month	onemonth	527	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.149.7.one.year	oneyear	149	12.4	No information	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.563.0.initial	initial	563	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.434.4.fourmonth	fourmonth	434	4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	Asian	0	0	0	0	189	124	34	AP Case	2	>37WGA	No
+sub.429.4.fourmonth	fourmonth	429	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.427.4.fourmonth	fourmonth	427	4.1	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.422.4.fourmonth	fourmonth	422	4.2	Exclusively BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.228.12.sick	sick	228	11.8	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	57	21	21	AP Case	2	33-37WGA	Yes
+sub.159.7.one.year	oneyear	159	12.1	No information	Partially BF	Resolved	Vaginal	Male	White	0	1	0	1	128	12	12	AP Case	1	>37WGA	No
+sub.554.1.two.week	twoweek	554	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.436.4.fourmonth	fourmonth	436	4.3	Exclusively BF	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.535.2.one.month	onemonth	535	1.1	Exclusively BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.498.3.twomonth	twomonth	498	2.4	Partially BF	Partially BF	Control	Vaginal	Female	White	1	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.541.2.one.month	onemonth	541	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.533.11.sick	sick	533	1.6	Formula	Partially BF	Symptomatic	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.273.12.sick	sick	273	8.5	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.360.5.sixmonth	sixmonth	360	6.1	Formula	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.349.5.sixmonth	sixmonth	349	6.4	Exclusively BF	Partially BF	Resolved	C-section	Female	White	1	0	1	1	89	34	28	AP Case	1	>37WGA	Yes
+sub.554.12.sick	sick	554	0.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.511.3.twomonth	twomonth	511	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.228.7.one.year	oneyear	228	12.2	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	57	21	21	AP Case	2	33-37WGA	Yes
+sub.571.1.two.week	twoweek	571	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.533.3.twomonth	twomonth	533	1.9	Formula	Partially BF	Symptomatic	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.179.7.one.year	oneyear	179	11.8	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	190	33	26	AP Case	1	>37WGA	Yes
+sub.573.11.sick	sick	573	0.3	Exclusively BF	Partially BF	Pre-symptoms	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.445.4.fourmonth	fourmonth	445	4.2	Formula	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	62	22	15	AP Case	1	>37WGA	No
+sub.364.5.sixmonth	sixmonth	364	6.3	Partially BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.554.13.sick	sick	554	0.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.527.11.sick	sick	527	1.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.164.7.one.year	oneyear	164	12.6	No information	Exclusively BF	Control	C-section	Male	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.249.6.ninemonth	ninemonth	249	9.6	No information	Exclusively BF	Control	Vaginal	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.370.5.sixmonth	sixmonth	370	6.2	Partially BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.431.13.sick	sick	431	4.7	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.526.11.sick	sick	526	1.8	Formula	Partially BF	Symptomatic	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.247.16.sick	sick	247	10.1	No information	Exclusively BF	Resolved	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.577.1.two.week	twoweek	577	0.3	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	0	0	184	59	32	AP Case	2	>37WGA	No
+sub.554.2.one.month	onemonth	554	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.260.6.ninemonth	ninemonth	260	9.6	No information	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.524.3.twomonth	twomonth	524	2	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.273.6.ninemonth	ninemonth	273	9.1	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.586.0.initial	initial	586	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	NA	0	1	1	96	79	50	AP Case	NA	>37WGA	No
+sub.267.6.ninemonth	ninemonth	267	9.1	No information	Partially BF	Resolved	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.188.7.one.year	oneyear	188	12.1	No information	Exclusively BF	Control	C-section	Male	Multiple Race	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.571.2.one.month	onemonth	571	0.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.569.2.one.month	onemonth	569	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Multiple Race	1	1	1	1	46	21	21	AP Case	1	>37WGA	No
+sub.563.2.one.month	onemonth	563	1.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.527.12.sick	sick	527	2.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.464.4.fourmonth	fourmonth	464	4.1	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.271.6.ninemonth	ninemonth	271	9.2	No information	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.526.12.sick	sick	526	2.1	Formula	Partially BF	Symptomatic	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.454.4.fourmonth	fourmonth	454	4.6	Formula	Formula	Resolved	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.573.12.sick	sick	573	0.9	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.280.6.ninemonth	ninemonth	280	9	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.586.1.two.week	twoweek	586	0.5	Partially BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	NA	0	1	1	96	79	50	AP Case	NA	>37WGA	No
+sub.585.0.initial	initial	585	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.527.3.twomonth	twomonth	527	2.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.272.6.ninemonth	ninemonth	272	9.4	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.471.4.fourmonth	fourmonth	471	4.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.475.4.fourmonth	fourmonth	475	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.394.5.sixmonth	sixmonth	394	6.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.541.3.twomonth	twomonth	541	2.2	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.282.6.ninemonth	ninemonth	282	9.2	No information	Exclusively BF	Resolved	C-section	Male	White	1	0	1	1	190	30	30	AP Case	1	>37WGA	Yes
+sub.573.2.one.month	onemonth	573	1.2	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.405.13.sick	sick	405	8	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.586.11.sick	sick	586	0.7	Partially BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	NA	0	1	1	96	79	50	AP Case	NA	>37WGA	No
+sub.247.17.sick	sick	247	10.8	No information	Exclusively BF	Resolved	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.225.11.sick	sick	225	11.3	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.577.2.one.month	onemonth	577	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	0	0	0	184	59	32	AP Case	2	>37WGA	No
+sub.601.1.two.week	twoweek	601	0.4	Exclusively BF	Formula	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.535.3.twomonth	twomonth	535	2.3	Exclusively BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.526.13.sick	sick	526	2.7	Formula	Partially BF	Symptomatic	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.397.5.sixmonth	sixmonth	397	6.5	Exclusively BF	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.604.1.two.week	twoweek	604	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	0	0	0	0	63	49	48	AP Case	NA	>37WGA	Yes
+sub.290.6.ninemonth	ninemonth	290	9.7	No information	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	27	20	19	AP Case	1	33-37WGA	Yes
+sub.192.7.one.year	oneyear	192	12.7	No information	Partially BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.585.13.sick	sick	585	1.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.299.6.ninemonth	ninemonth	299	9.2	No information	Exclusively BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.615.0.initial	initial	615	0.3	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.563.3.twomonth	twomonth	563	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.498.4.fourmonth	fourmonth	498	4	Partially BF	Partially BF	Control	Vaginal	Female	White	1	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.416.5.sixmonth	sixmonth	416	6.3	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.601.2.one.month	onemonth	601	0.9	Exclusively BF	Formula	Pre-symptoms	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.309.6.ninemonth	ninemonth	309	9	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.310.6.ninemonth	ninemonth	310	9	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.569.3.twomonth	twomonth	569	1.9	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Multiple Race	1	1	1	1	46	21	21	AP Case	1	>37WGA	No
+sub.422.5.sixmonth	sixmonth	422	6.2	Exclusively BF	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.197.7.one.year	oneyear	197	12.8	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.585.14.sick	sick	585	1.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.436.5.sixmonth	sixmonth	436	6.1	Exclusively BF	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.573.3.twomonth	twomonth	573	1.8	Partially BF	Partially BF	Symptomatic	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.526.15.sick	sick	526	3.2	Formula	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.424.5.sixmonth	sixmonth	424	6.6	Formula	Partially BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.312.6.ninemonth	ninemonth	312	9.1	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.316.6.ninemonth	ninemonth	316	9.1	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	1	0	0	0	59	31	16	AP Case	2	>37WGA	Yes
+sub.431.5.sixmonth	sixmonth	431	6.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.554.3.twomonth	twomonth	554	2.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.222.7.one.year	oneyear	222	12.1	No information	Partially BF	Control	C-section	Female	White	1	1	1	1	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.571.3.twomonth	twomonth	571	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.440.5.sixmonth	sixmonth	440	6.2	NA	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.604.2.one.month	onemonth	604	0.9	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	0	0	0	0	63	49	48	AP Case	NA	>37WGA	Yes
+sub.427.5.sixmonth	sixmonth	427	6.3	Formula	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.439.5.sixmonth	sixmonth	439	6.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.585.12.sick	sick	585	1.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.307.6.ninemonth	ninemonth	307	9.5	No information	Partially BF	Resolved	C-section	Female	Multiple Race	1	0	1	1	59	31	31	AP Case	1	>37WGA	Yes
+sub.577.3.twomonth	twomonth	577	1.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	0	0	0	184	59	32	AP Case	2	>37WGA	No
+sub.630.0.initial	initial	630	0.2	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.601.11.sick	sick	601	1.3	Exclusively BF	Formula	Symptomatic	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.638.0.initial	initial	638	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	0	122	89	53	AP Case	NA	>37WGA	No
+sub.321.6.ninemonth	ninemonth	321	9.2	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.533.4.fourmonth	fourmonth	533	3.9	Formula	Partially BF	Symptomatic	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.445.5.sixmonth	sixmonth	445	6.2	Formula	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	62	22	15	AP Case	1	>37WGA	No
+sub.615.2.one.month	onemonth	615	1	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.358.6.ninemonth	ninemonth	358	8.5	No information	Partially BF	Resolved	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.639.0.initial	initial	639	0.3	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.643.0.initial	initial	643	0.3	Formula	Formula	NA	C-section	Female	White	1	1	1	1	119	81	32	NA	1	33-37WGA	Yes
+sub.408.12.sick	sick	408	7.3	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.643.1.two.week	twoweek	643	0.5	Formula	Formula	NA	C-section	Female	White	1	1	1	1	119	81	32	NA	1	33-37WGA	Yes
+sub.233.7.one.year	oneyear	233	12.4	No information	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.655.0.initial	initial	655	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.524.4.fourmonth	fourmonth	524	4.1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.585.3.twomonth	twomonth	585	2.2	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.652.0.initial	initial	652	0.3	Partially BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.226.7.one.year	oneyear	226	12.9	No information	Formula	Control	C-section	Male	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.615.13.sick	sick	615	1.4	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.526.14.sick	sick	526	4.1	Formula	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.621.2.one.month	onemonth	621	1.2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Asian	1	0	0	0	126	93	82	AP Case	1	>37WGA	Yes
+sub.655.1.two.week	twoweek	655	0.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.511.11.sick	sick	511	4.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.601.3.twomonth	twomonth	601	2.1	Exclusively BF	Formula	Symptomatic	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.666.0.initial	initial	666	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.657.1.two.week	twoweek	657	0.6	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.347.6.ninemonth	ninemonth	347	9.3	No information	Exclusively BF	Resolved	Vaginal	Female	Asian	1	0	0	0	119	27	27	AP Case	1	>37WGA	Yes
+sub.431.14.sick	sick	431	7.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.355.6.ninemonth	ninemonth	355	9.2	No information	Partially BF	Control	Vaginal	Male	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.554.14.sick	sick	554	3.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.665.0.initial	initial	665	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.571.11.sick	sick	571	3.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.604.3.twomonth	twomonth	604	2.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	0	0	0	0	63	49	48	AP Case	NA	>37WGA	Yes
+sub.573.16.sick	sick	573	3.1	Partially BF	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.475.5.sixmonth	sixmonth	475	6.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.464.5.sixmonth	sixmonth	464	6.4	Partially BF	Exclusively BF	Symptomatic	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.535.4.fourmonth	fourmonth	535	4.3	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.541.4.fourmonth	fourmonth	541	4.3	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.527.4.fourmonth	fourmonth	527	4.5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.665.11.sick	sick	665	0.7	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.364.6.ninemonth	ninemonth	364	9.2	No information	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.511.12.sick	sick	511	5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.639.2.one.month	onemonth	639	1.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.666.1.two.week	twoweek	666	0.6	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.652.2.one.month	onemonth	652	1.1	Partially BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.405.14.sick	sick	405	10.3	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.367.6.ninemonth	ninemonth	367	9.3	No information	Exclusively BF	Resolved	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.260.7.one.year	oneyear	260	12.6	No information	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	33-37WGA	Yes
+sub.621.3.twomonth	twomonth	621	1.9	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Male	Asian	1	0	0	0	126	93	82	AP Case	1	>37WGA	Yes
+sub.571.16.sick	sick	571	3.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.535.14.sick	sick	535	4.6	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.376.6.ninemonth	ninemonth	376	9.2	No information	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.247.7.one.year	oneyear	247	13.1	No information	Exclusively BF	Resolved	C-section	Female	Multiple Race	1	1	1	1	179	111	96	AP Case	NA	>37WGA	Yes
+sub.665.2.one.month	onemonth	665	1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.666.2.one.month	onemonth	666	0.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.271.7.one.year	oneyear	271	12	No information	Formula	NA	C-section	Female	White	0	0	1	1	62	19	19	NA	1	>37WGA	Yes
+sub.586.12.sick	sick	586	3.1	Partially BF	Exclusively BF	Symptomatic	Vaginal	Female	White	NA	0	1	1	96	79	50	AP Case	NA	>37WGA	No
+sub.663.2.one.month	onemonth	663	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	119	32	32	AP Case	2	>37WGA	No
+sub.571.12.sick	sick	571	3.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.563.4.fourmonth	fourmonth	563	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.671.2.one.month	onemonth	671	0.9	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.615.14.sick	sick	615	2.3	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.686.0.initial	initial	686	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	Vaginal	Male	White	1	0	0	0	68	32	32	AP Case	1	>37WGA	No
+sub.655.11.sick	sick	655	1.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.535.13.sick	sick	535	4.8	Exclusively BF	Partially BF	Symptomatic	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.511.13.sick	sick	511	5.5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.601.12.sick	sick	601	3.1	Exclusively BF	Formula	Resolved	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.655.12.sick	sick	655	1.5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.676.2.one.month	onemonth	676	0.9	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.272.7.one.year	oneyear	272	12.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	103	69	21	AP Case	1	>37WGA	No
+sub.554.4.fourmonth	fourmonth	554	4.5	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.672.2.one.month	onemonth	672	1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	123	36	30	AP Case	2	>37WGA	No
+sub.282.7.one.year	oneyear	282	12.2	No information	Exclusively BF	Resolved	C-section	Male	White	1	0	1	1	190	30	30	AP Case	1	>37WGA	Yes
+sub.273.7.one.year	oneyear	273	12.6	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	1	1	189	92	36	AP Case	2	>37WGA	Yes
+sub.498.5.sixmonth	sixmonth	498	6.5	Formula	Partially BF	Control	Vaginal	Female	White	1	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.571.4.fourmonth	fourmonth	571	4.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.672.11.sick	sick	672	1.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	123	36	30	AP Case	2	>37WGA	No
+sub.397.6.ninemonth	ninemonth	397	9.3	No information	Partially BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.692.0.initial	initial	692	0.5	Formula	Formula	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.267.7.one.year	oneyear	267	12.6	No information	Partially BF	Resolved	Vaginal	Male	White	0	0	0	0	152	124	34	AP Case	1	>37WGA	No
+sub.394.6.ninemonth	ninemonth	394	9.4	No information	Exclusively BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.695.0.initial	initial	695	0.4	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	1	1	126	73	28	AP Case	2	>37WGA	Yes
+sub.470.5.sixmonth	sixmonth	470	7.3	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.630.3.twomonth	twomonth	630	2.3	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.408.6.ninemonth	ninemonth	408	9.1	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	0	0	0	0	66	32	12	AP Case	2	>37WGA	Yes
+sub.569.4.fourmonth	fourmonth	569	4.3	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Multiple Race	1	1	1	1	46	21	21	AP Case	1	>37WGA	No
+sub.440.12.sick	sick	440	8.5	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.669.2.one.month	onemonth	669	1.1	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	1	1	62	33	15	AP Case	NA	>37WGA	No
+sub.686.2.one.month	onemonth	686	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	68	32	32	AP Case	1	>37WGA	No
+sub.638.3.twomonth	twomonth	638	2.3	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	122	89	53	AP Case	NA	>37WGA	No
+sub.573.4.fourmonth	fourmonth	573	4.4	Partially BF	Partially BF	Resolved	Vaginal	Female	White	1	0	1	1	56	28	10	AP Case	1	>37WGA	Yes
+sub.527.15.sick	sick	527	5.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.669.12.sick.1	sick	669	1.6	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	1	1	62	33	15	AP Case	NA	>37WGA	No
+sub.669.13.sick.2	sick	669	1.6	Formula	Formula	Symptomatic	Vaginal	Female	White	1	0	1	1	62	33	15	AP Case	NA	>37WGA	No
+sub.708.0.initial	initial	708	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.429.11.sick	sick	429	8.7	No information	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.639.3.twomonth	twomonth	639	2.3	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.471.5.sixmonth	sixmonth	471	7.6	No information	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.655.3.twomonth	twomonth	655	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.615.15.sick	sick	615	3.1	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.511.5.sixmonth	sixmonth	511	6.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	0	0	187	130	53	AP Case	2	>37WGA	No
+sub.657.3.twomonth	twomonth	657	2.1	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.554.15.sick	sick	554	5.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.585.4.fourmonth	fourmonth	585	4.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.666.3.twomonth	twomonth	666	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.571.13.sick	sick	571	4.7	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.672.3.twomonth	twomonth	672	1.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	123	36	30	AP Case	2	>37WGA	No
+sub.663.3.twomonth	twomonth	663	2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	119	32	32	AP Case	2	>37WGA	No
+sub.711.0.initial	initial	711	0.3	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.307.7.one.year	oneyear	307	12.1	No information	Partially BF	Resolved	C-section	Female	Multiple Race	1	0	1	1	59	31	31	AP Case	1	>37WGA	Yes
+sub.410.6.ninemonth	ninemonth	410	9.5	No information	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.665.3.twomonth	twomonth	665	2.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.454.13.sick	sick	454	8.4	No information	Formula	Resolved	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.586.4.fourmonth	fourmonth	586	4.1	Partially BF	Exclusively BF	Resolved	Vaginal	Female	White	NA	0	1	1	96	79	50	AP Case	NA	>37WGA	No
+sub.659.3.twomonth	twomonth	659	2.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.524.5.sixmonth	sixmonth	524	6.2	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.427.6.ninemonth	ninemonth	427	9	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.643.12.sick	sick	643	2.7	Formula	Formula	NA	C-section	Female	White	1	1	1	1	119	81	32	NA	1	33-37WGA	Yes
+sub.671.3.twomonth	twomonth	671	1.9	Exclusively BF	Exclusively BF	Control	C-section	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.695.2.one.month	onemonth	695	0.9	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	1	1	126	73	28	AP Case	2	>37WGA	Yes
+sub.709.0.initial	initial	709	0.5	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.526.18.sick	sick	526	6	Formula	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.416.6.ninemonth	ninemonth	416	9.4	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.711.1.two.week	twoweek	711	0.5	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.440.6.ninemonth	ninemonth	440	9.1	No information	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	55	40	40	AP Case	1	>37WGA	Yes
+sub.601.4.fourmonth	fourmonth	601	4	Exclusively BF	Formula	Resolved	Vaginal	Female	Asian	1	0	0	0	93	41	39	AP Case	2	33-37WGA	No
+sub.569.13.sick	sick	569	4.9	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Multiple Race	1	1	1	1	46	21	21	AP Case	1	>37WGA	No
+sub.309.7.one.year	oneyear	309	12.2	No information	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.431.6.ninemonth	ninemonth	431	9.1	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.360.6.ninemonth	ninemonth	360	11	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.554.16.sick	sick	554	5.4	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.533.5.sixmonth	sixmonth	533	6.4	Formula	Partially BF	Resolved	C-section	Male	White	1	0	1	1	118	33	28	AP Case	1	>37WGA	Yes
+sub.439.6.ninemonth	ninemonth	439	9.1	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.429.6.ninemonth	ninemonth	429	9.2	No information	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.708.1.two.week	twoweek	708	0.7	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.571.14.sick	sick	571	5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.526.5.sixmonth	sixmonth	526	6.2	Formula	Partially BF	Resolved	Vaginal	Male	White	1	0	1	1	96	64	26	AP Case	1	33-37WGA	Yes
+sub.422.6.ninemonth	ninemonth	422	9.4	No information	Partially BF	Control	Vaginal	Male	White	1	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.729.0.initial	initial	729	0.2	Partially BF	Partially BF	Pre-symptoms	Vaginal	Male	White	1	1	1	1	62	27	20	AP Case	1	>37WGA	Yes
+sub.436.6.ninemonth	ninemonth	436	9.3	No information	Partially BF	Control	Vaginal	Female	Asian	0	1	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.535.5.sixmonth	sixmonth	535	6.2	Exclusively BF	Partially BF	Resolved	Vaginal	Female	Asian	1	0	0	0	147	131	71	AP Case	1	>37WGA	No
+sub.676.3.twomonth	twomonth	676	2	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.711.11.sick	sick	711	0.7	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.665.13.sick	sick	665	2.5	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.367.13.sick	sick	367	10.9	No information	Exclusively BF	Resolved	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.569.14.sick	sick	569	5.2	NA	Exclusively BF	Resolved	Vaginal	Male	Multiple Race	1	1	1	1	46	21	21	AP Case	1	>37WGA	No
+sub.692.11.sick	sick	692	1.4	Formula	Formula	Symptomatic	Vaginal	Female	Asian	0	0	0	0	126	17	17	AP Case	1	>37WGA	No
+sub.738.0.initial	initial	738	0.2	Formula	Formula	Control	Vaginal	Male	NA	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.431.15.sick	sick	431	9.3	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.321.7.one.year	oneyear	321	12.1	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.676.11.sick	sick	676	2.1	Partially BF	Partially BF	Control	Vaginal	Female	Multiple Race	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.554.17.sick	sick	554	5.7	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.571.15.sick	sick	571	5.3	NA	Exclusively BF	Symptomatic	Vaginal	Female	White	1	0	1	1	160	60	26	AP Case	1	>37WGA	No
+sub.665.14.sick	sick	665	2.6	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.310.7.one.year	oneyear	310	12.5	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	0	0	90	34	30	AP Case	1	>37WGA	No
+sub.731.0.initial	initial	731	0.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.527.5.sixmonth	sixmonth	527	6.6	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.670.0.initial	initial	670	2.5	Partially BF	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.731.11.sick	sick	731	0.4	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.445.6.ninemonth	ninemonth	445	9.2	No information	Exclusively BF	Resolved	Vaginal	Female	White	1	0	1	1	62	22	15	AP Case	1	>37WGA	No
+sub.733.1.two.week	twoweek	733	0.5	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	0	0	0	0	198	33	14	AP Case	NA	>37WGA	Yes
+sub.735.1.two.week	twoweek	735	0.4	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.738.1.two.week	twoweek	738	0.4	Formula	Formula	Control	Vaginal	Male	NA	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.405.7.one.year	oneyear	405	12.1	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	0	0	96	82	69	AP Case	1	25-32WGA	Yes
+sub.672.12.sick	sick	672	2.4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	123	36	30	AP Case	2	>37WGA	No
+sub.439.18.sick	sick	439	9.6	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.454.6.ninemonth	ninemonth	454	9.2	No information	Formula	Resolved	Vaginal	Male	White	1	1	1	1	72	6	5	AP Case	1	33-37WGA	Yes
+sub.667.3.twomonth	twomonth	667	2.9	Partially BF	Partially BF	Symptomatic	C-section	Female	Asian	0	0	0	0	164	120	30	AP Case	1	>37WGA	Yes
+sub.711.2.one.month	onemonth	711	1.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.686.3.twomonth	twomonth	686	2.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	68	32	32	AP Case	1	>37WGA	No
+sub.672.13.sick	sick	672	2.6	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	1	1	1	1	123	36	30	AP Case	2	>37WGA	No
+sub.749.11.sick	sick	749	0.3	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.716.2.one.month	onemonth	716	1.1	Formula	Formula	Symptomatic	C-section	Female	Black	1	0	1	1	278	63	15	AP Case	1	>37WGA	Yes
+sub.655.13.sick	sick	655	3.2	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.729.2.one.month	onemonth	729	0.9	Formula	Partially BF	Symptomatic	Vaginal	Male	White	1	1	1	1	62	27	20	AP Case	1	>37WGA	Yes
+sub.665.15.sick	sick	665	3	Exclusively BF	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.585.18.sick	sick	585	5.3	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.585.15.sick	sick	585	5.3	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.554.19.sick	sick	554	6.1	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.758.0.initial	initial	758	0.5	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	White	1	0	0	0	199	136	39	AP Case	1	>37WGA	Yes
+sub.316.7.one.year	oneyear	316	13	No information	Exclusively BF	Resolved	C-section	Male	Multiple Race	1	0	0	0	59	31	16	AP Case	2	>37WGA	Yes
+sub.621.4.fourmonth	fourmonth	621	4.1	Exclusively BF	Exclusively BF	Symptomatic	C-section	Male	Asian	1	0	0	0	126	93	82	AP Case	1	>37WGA	Yes
+sub.347.7.one.year	oneyear	347	12.1	No information	Exclusively BF	Resolved	Vaginal	Female	Asian	1	0	0	0	119	27	27	AP Case	1	>37WGA	Yes
+sub.554.5.sixmonth	sixmonth	554	6.3	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	1	1	109	20	13	AP Case	2	>37WGA	No
+sub.716.11.sick	sick	716	1.3	Formula	Formula	Symptomatic	C-section	Female	Black	1	0	1	1	278	63	15	AP Case	1	>37WGA	Yes
+sub.349.7.one.year	oneyear	349	12.2	No information	Partially BF	Resolved	C-section	Female	White	1	0	1	1	89	34	28	AP Case	1	>37WGA	Yes
+sub.735.2.one.month	onemonth	735	0.9	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.665.16.sick	sick	665	3.3	Exclusively BF	Exclusively BF	Resolved	C-section	Female	Asian	1	0	0	0	79	20	19	AP Case	2	>37WGA	Yes
+sub.708.3.twomonth	twomonth	708	1.6	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.728.2.one.month	onemonth	728	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	58	25	25	AP Case	2	>37WGA	Yes
+sub.464.6.ninemonth	ninemonth	464	9.2	No information	Exclusively BF	Resolved	Vaginal	Male	Asian	1	0	0	0	196	126	125	AP Case	1	33-37WGA	No
+sub.760.0.initial	initial	760	0.3	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.695.3.twomonth	twomonth	695	2	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	1	1	126	73	28	AP Case	2	>37WGA	Yes
+sub.731.2.one.month	onemonth	731	1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	No
+sub.733.2.one.month	onemonth	733	1.1	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	0	0	0	0	198	33	14	AP Case	NA	>37WGA	Yes
+sub.643.4.fourmonth	fourmonth	643	3.9	Formula	Formula	NA	C-section	Female	White	1	1	1	1	119	81	32	NA	1	33-37WGA	Yes
+sub.738.2.one.month	onemonth	738	1	Formula	Formula	Control	Vaginal	Male	NA	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.630.4.fourmonth	fourmonth	630	4.1	Formula	Formula	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.360.7.one.year	oneyear	360	12.1	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.431.16.sick	sick	431	10.2	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	123	17	5	AP Case	2	>37WGA	No
+sub.439.19.sick	sick	439	10.3	No information	Exclusively BF	Resolved	Vaginal	Female	NA	1	1	1	1	131	12	12	AP Case	NA	>37WGA	No
+sub.470.6.ninemonth	ninemonth	470	9.2	No information	Partially BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	No
+sub.638.4.fourmonth	fourmonth	638	4	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Male	White	1	0	0	0	122	89	53	AP Case	NA	>37WGA	No
+sub.639.4.fourmonth	fourmonth	639	4	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	0	50	36	36	AP Case	2	>37WGA	No
+sub.760.12.sick	sick	760	0.6	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.709.3.twomonth	twomonth	709	2	Exclusively BF	Exclusively BF	Control	C-section	Male	Multiple Race	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.777.0.initial	initial	777	0.2	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.729.12.sick	sick	729	1.5	Formula	Partially BF	Symptomatic	Vaginal	Male	White	1	1	1	1	62	27	20	AP Case	1	>37WGA	Yes
+sub.367.7.one.year	oneyear	367	12.1	No information	Exclusively BF	Resolved	C-section	Male	White	1	1	1	1	72	29	16	AP Case	1	>37WGA	Yes
+sub.585.16.sick	sick	585	5.9	Exclusively BF	Exclusively BF	Resolved	Vaginal	Male	Asian	1	1	1	1	66	31	31	AP Case	1	>37WGA	No
+sub.358.7.one.year	oneyear	358	12.4	No information	Partially BF	Resolved	C-section	Female	White	1	0	1	1	61	27	18	AP Case	1	>37WGA	Yes
+sub.782.11.sick	sick	782	0.2	Partially BF	Partially BF	Pre-symptoms	Vaginal	Female	Asian	0	0	0	0	129	39	21	AP Case	1	>37WGA	No
+sub.760.2.one.month	onemonth	760	0.8	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.655.4.fourmonth	fourmonth	655	3.9	Exclusively BF	Exclusively BF	Symptomatic	Vaginal	Female	White	0	0	0	0	119	39	12	AP Case	NA	>37WGA	No
+sub.749.2.one.month	onemonth	749	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.527.16.sick	sick	527	7.8	No information	Exclusively BF	Resolved	Vaginal	Male	White	1	0	0	1	173	53	29	AP Case	2	>37WGA	No
+sub.652.4.fourmonth	fourmonth	652	4.1	Partially BF	Partially BF	Control	C-section	Male	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.667.4.fourmonth	fourmonth	667	3.9	Formula	Partially BF	Symptomatic	C-section	Female	Asian	0	0	0	0	164	120	30	AP Case	1	>37WGA	Yes
+sub.471.6.ninemonth	ninemonth	471	9.7	No information	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	2	>37WGA	Yes
+sub.615.17.sick	sick	615	5.1	Formula	Partially BF	NA	Vaginal	Female	White	0	1	1	1	NA	30	8	NA	1	>37WGA	No
+sub.790.0.initial	initial	790	0.4	Exclusively BF	Partially BF	Pre-symptoms	Vaginal	Male	Asian	0	0	0	0	125	26	26	AP Case	NA	>37WGA	No
+sub.760.13.sick	sick	760	1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	Multiple Race	NA	0	0	NA	NA	NA	NA	No AP	NA	>37WGA	No
+sub.711.3.twomonth	twomonth	711	2.1	Exclusively BF	Exclusively BF	Control	C-section	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	Yes
+sub.777.1.two.week	twoweek	777	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	Asian	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.716.3.twomonth	twomonth	716	2.1	Formula	Formula	Symptomatic	C-section	Female	Black	1	0	1	1	278	63	15	AP Case	1	>37WGA	Yes
+sub.928.0.initial	initial	928	0.3	Formula	Formula	Control	C-section	Female	Asian	1	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.927.0.initial	initial	927	0.3	Formula	Formula	Control	C-section	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.875.3.twomonth	twomonth	875	2	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.784.1.two.week	twoweek	784	0.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.784.2.one.month	onemonth	784	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.784.11.sick	sick	784	1.3	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.68.4.fourmonth	fourmonth	68	4	Formula	Partially BF	Resolved	Vaginal	Female	White	0	1	1	1	61	26	26	AP Case	NA	>37WGA	No
+sub.62.3.twomonth	twomonth	62	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.62.2.one.month	onemonth	62	1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.49.3.twomonth	twomonth	49	2.2	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Other	1	0	1	1	30	12	12	AP Case	1	25-32WGA	No
+sub.38.3.twomonth	twomonth	38	2.2	Partially BF	Partially BF	Control	Vaginal	Male	Other	1	0	1	1	NA	NA	NA	No AP	1	25-32WGA	No
+sub.62.5.sixmonth	sixmonth	62	6.3	Partially BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.927.2.one.month	onemonth	927	1	Formula	Formula	Control	C-section	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.49.4.fourmonth	fourmonth	49	3.9	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Other	1	0	1	1	30	12	12	AP Case	1	25-32WGA	No
+sub.68.5.sixmonth	sixmonth	68	6.4	Formula	Partially BF	Resolved	Vaginal	Female	White	0	1	1	1	61	26	26	AP Case	NA	>37WGA	No
+sub.62.4.fourmonth	fourmonth	62	4	Partially BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.38.2.one.month	onemonth	38	0.9	Partially BF	Partially BF	Control	Vaginal	Male	Other	1	0	1	1	NA	NA	NA	No AP	1	25-32WGA	No
+sub.49.2.one.month	onemonth	49	1.5	Partially BF	Exclusively BF	Resolved	Vaginal	Male	Other	1	0	1	1	30	12	12	AP Case	1	25-32WGA	No
+sub.68.3.twomonth	twomonth	68	2	Formula	Partially BF	Symptomatic	Vaginal	Female	White	0	1	1	1	61	26	26	AP Case	NA	>37WGA	No
+sub.62.1.two.week	twoweek	62	0.4	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.62.0.initial	initial	62	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.62.6.ninemonth	ninemonth	62	9.3	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.62.7.one.year	oneyear	62	12.1	No information	Exclusively BF	Control	Vaginal	Female	White	0	0	1	1	NA	NA	NA	No AP	1	>37WGA	No
+sub.387.4.fourmonth	fourmonth	387	4	Exclusively BF	Exclusively BF	Resolved	C-section	Female	White	0	0	0	0	98	61	56	AP Case	1	>37WGA	Yes
+sub.587.0.initial	initial	587	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.587.1.two.week	twoweek	587	0.5	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.587.11.sick	sick	587	1.2	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.596.2.one.month	onemonth	596	1	Exclusively BF	Exclusively BF	NA	Vaginal	Male	White	0	0	0	0	NA	NA	8	NA	1	>37WGA	No
+sub.587.3.twomonth	twomonth	587	2	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.387.6.ninemonth	ninemonth	387	8.9	No information	Exclusively BF	Resolved	C-section	Female	White	0	0	0	0	98	61	56	AP Case	1	>37WGA	Yes
+sub.596.4.fourmonth	fourmonth	596	4.4	Exclusively BF	Exclusively BF	NA	Vaginal	Male	White	0	0	0	0	NA	NA	8	NA	1	>37WGA	No
+sub.587.4.fourmonth	fourmonth	587	4.9	Partially BF	Exclusively BF	Symptomatic	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.387.7.one.year	oneyear	387	12.1	No information	Exclusively BF	Resolved	C-section	Female	White	0	0	0	0	98	61	56	AP Case	1	>37WGA	Yes
+sub.587.5.sixmonth	sixmonth	587	6.2	Formula	Exclusively BF	Resolved	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.784.3.twomonth	twomonth	784	1.9	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.587.12.sick	sick	587	7.6	No information	Exclusively BF	Resolved	C-section	Female	White	1	0	0	1	148	35	29	AP Case	1	>37WGA	Yes
+sub.875.0.initial	initial	875	0.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.429.14.sick	sick	429	13.5	No information	Exclusively BF	Control	Vaginal	Female	White	1	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.875.2.one.month	onemonth	875	1.1	Exclusively BF	Exclusively BF	Control	Vaginal	Male	White	0	0	0	0	NA	NA	NA	No AP	NA	>37WGA	No
+sub.784.4.fourmonth	fourmonth	784	4.1	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.989.0.initial	initial	989	0.2	Exclusively BF	Exclusively BF	Pre-symptoms	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.989.1.two.week	twoweek	989	0.4	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.927.3.twomonth	twomonth	927	2.4	Formula	Formula	Control	C-section	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.928.3.twomonth	twomonth	928	2.4	Formula	Formula	Control	C-section	Female	Asian	1	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.784.5.sixmonth	sixmonth	784	6.3	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.784.13.sick	sick	784	6.5	Exclusively BF	Exclusively BF	Control	Vaginal	Female	White	0	0	0	0	NA	NA	NA	No AP	1	>37WGA	Yes
+sub.989.2.one.month	onemonth	989	1.3	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.1039.0.initial	initial	1039	0.2	Partially BF	Partially BF	Pre-symptoms	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.1039.1.two.week	twoweek	1039	0.4	Partially BF	Partially BF	Pre-symptoms	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.989.3.twomonth	twomonth	989	2	NA	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.1039.11.sick	sick	1039	1	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.1039.2.one.month	onemonth	1039	1.1	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.1039.12.sick	sick	1039	1.6	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.927.4.fourmonth	fourmonth	927	4.5	Formula	Formula	Control	C-section	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.928.4.fourmonth	fourmonth	928	4.5	Formula	Formula	Control	C-section	Female	Asian	1	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.1039.3.twomonth	twomonth	1039	2.2	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
+sub.989.12.sick	sick	989	3.4	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.989.4.fourmonth	fourmonth	989	3.9	Exclusively BF	Exclusively BF	Symptomatic	C-section	Female	White	1	1	1	1	192	90	11	AP Case	1	>37WGA	Yes
+sub.927.5.sixmonth	sixmonth	927	6.3	NA	Formula	Control	C-section	Male	Asian	NA	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.928.5.sixmonth	sixmonth	928	6.3	NA	Formula	Control	C-section	Female	Asian	1	0	0	NA	NA	NA	NA	No AP	NA	33-37WGA	Yes
+sub.1039.4.fourmonth	fourmonth	1039	4.3	Partially BF	Partially BF	Symptomatic	C-section	Female	White	1	1	1	1	186	48	23	AP Case	1	>37WGA	Yes
