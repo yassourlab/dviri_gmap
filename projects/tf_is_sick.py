@@ -23,11 +23,11 @@ def get_gmap_data(*args, **kwargs):
     return merge_df,meta_idx
 
 def get_is_sick_dataset(merged_df, data_idx, batch_size=32, binary_data=False):
-    control_merged_data = merged_df[merged_df.symptoms == "Control"]
-    data_df = control_merged_data.iloc[:, data_idx:]
+    merged_df = merged_df.loc[~pd.isna(merged_df.symptoms)]
 
-    data_df = data_df.loc[~pd.isna(data_df.symptoms)]
-    data_df = data_df.assign(label = (data_df.symptoms == 'Symptomatic'))
+    # control_merged_data = merged_df[merged_df.symptoms == "Control"]
+    data_df = merged_df.iloc[:, :data_idx]
+    data_df = data_df.assign(label = (merged_df.symptoms == 'Symptomatic'))
 
     test_df = data_df.sample(frac=0.2, random_state=666)
     train_df = data_df.drop(test_df.index)
@@ -62,7 +62,7 @@ def main():
     merge_df,meta_idx = get_gmap_data()
     train_ds, test_ds = get_is_sick_dataset(merge_df,meta_idx, batch_size = 32)
     model = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(meta_idx)),
+    tf.keras.layers.Flatten(input_shape=([meta_idx])),
     tf.keras.layers.Dense(128, activation='relu'),
     tf.keras.layers.Dense(1)
     ])
@@ -71,10 +71,10 @@ def main():
     loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
     metrics=['accuracy'])
 
-    model.fit(train_ds, epoches=10)
+    model.fit(train_ds, epochs=10)
     pass
 
 
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
