@@ -26,6 +26,9 @@ from tqdm import tqdm
                             #  )
 from scipy.spatial import distance
 import skbio
+
+from functions import split_train_test
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 320)
 # %%
@@ -38,23 +41,6 @@ pd.set_option('display.width', 320)
 
 norm_l6_project = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/FeatureTableNew.tsv"
 META_PATH = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/metadataNew.tsv"
-
-def split_train_test(x, split_control=True, train_ratio=0.75):
-    #     import ipdb;ipdb.set_trace()
-    rand_val = np.random.rand()
-    is_train = rand_val < train_ratio
-    if not split_control:
-        tt = 'train' if is_train else 'test'
-
-    else:
-        if not any(x.is_control):
-            tt = 'test'
-        else:
-            tt = 'control_train' if is_train else 'control_test'
-
-    x = x.assign(tt=tt)
-    return x
-
 
 def get_tt_data(merge_df, split_control=True, train_ratio=0.85):
     """
@@ -468,11 +454,14 @@ class RegressionRunner:
 
         if len(data) < 2:
             return group_df
+        if len(data)< 16 and kind == 'cubic':
+            kind = 'linear'
+            logger.info("Can't use cubic interpulation for less than 16 examples")
         y = group_df.visit_age_mo.to_numpy()
         x = np.arange(0,data.shape[1],1)
 
         
-        f = interpolate.interp2d(x,y,data,kind="linear")
+        f = interpolate.interp2d(x,y,data,kind)
         pd.DataFrame(data)
 
         ynew = np.arange(y.min(),y.max()+interp_interval,interp_interval).round(1)
@@ -484,38 +473,29 @@ class RegressionRunner:
         inter_df.columns = group_df.iloc[:,:meta_idx].columns
         inter_df['visit_age_mo'] = ynew
 
-        # cols = list(inter_df.columns)
-        # overlapping_df = inter_df.loc[inter_df.visit_age_mo.isin(group_df.visit_age_mo)]
-        # group_overlap_df =  group_df.loc[group_df.visit_age_mo.isin(overlapping_df.visit_age_mo)]
-        # overlapping_df.iloc[:,:meta_idx] = group_overlap_df.iloc[:,:meta_idx]
         new_interpulation_rows_df = inter_df[~inter_df.visit_age_mo.isin(group_df.visit_age_mo)] #remove original values
         new_interpulation_rows_df['source'] = 'interp'
         group_df['source'] = 'data'
         res_df = pd.concat([new_interpulation_rows_df,group_df])
         res_df = res_df.sort_values(['visit_age_mo']).reset_index(drop=True)
-        idxs = res_df[res_df.source == 'data'].index.tolist()
-        take_idxs = list()
-        for i in range(1,len(idxs)-1):
-            idx_range = idxs[i] - idxs[i-1]
-            interval = idx_range//(num_extra_samples+1)
-            if interval == 0:
-                continue
-            range_idxs = list(range(idxs[i-1],idxs[i],interval))[1:]
-            take_idxs += range_idxs
-        
-        res_df.tt = res_df.tt.dropna().unique()[0]
 
-                # ranges = orig_data_idxs[1:]-orig_data_idxs[:-1]
-        # intervals = ranges//(num_extra_samples+1)
-        # mul_range = np.arange(1,num_extra_samples+1)[np.newaxis, :]
-        # samples_jumps = np.tile(mul_range,(len(ranges),1))
-        # take_idxs = samples_jumps * intervals[np.newaxis,:].T
-        # take_idxs = np.concatenate([take_idxs.ravel(),orig_data_idxs])
-        # final_df = res_df.iloc[take_idxs].sort_values(['visit_age_mo']).reset_index(drop=True)
-        final_df = res_df.iloc[list(set(take_idxs+idxs))].sort_values(['visit_age_mo']).reset_index(drop=True)
+        final_df = self.extract_equale_interval_samples(num_extra_samples, res_df)
+
         self.draw_interp_results(final_df)
         return final_df
-    
+
+    def extract_equale_interval_samples(self, num_extra_samples, res_df):
+        idxs = res_df[res_df.source == 'data'].index
+        res_df.tt = res_df.tt.dropna().unique()[0]
+        ranges = idxs[1:] - idxs[:-1]
+        intervals = ranges // (num_extra_samples + 1)
+        mul_range = np.arange(1, num_extra_samples + 1)[np.newaxis, :]
+        samples_jumps = np.tile(mul_range, (len(ranges), 1))
+        take_idxs = (samples_jumps * intervals[np.newaxis, :].T) + idxs[:-1, np.newaxis]
+        take_idxs = np.concatenate([take_idxs.ravel(), idxs])
+        final_df = res_df.iloc[take_idxs].sort_values(['visit_age_mo']).reset_index(drop=True)
+        return final_df
+
     def draw_interp_results(self, df):
         
         data = df.iloc[:,:self.runner.get_meta_idx()]
