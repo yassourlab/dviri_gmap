@@ -1,33 +1,26 @@
 # %%
+from typing import Callable, Union, Optional
+
 import matplotlib.pyplot as plt
-from loguru import logger
-from scipy import interpolate
 import numpy as np
 import pandas as pd
-from functools import partial
 import plotly.express as px
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
-import seaborn as sns
-from matplotlib.colors import LinearSegmentedColormap
-from plotly.subplots import make_subplots
+from loguru import logger
 from sklearn import linear_model
-from sklearn.cluster import KMeans
-from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.model_selection import train_test_split
-from tqdm import tqdm
+from dataclasses import dataclass, InitVar, field
+# from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
+from gmap_runner import GmapRunner
+
 # from consts import (best_clf_params, DEFAULT_ST_SORTED_ARRAY, META_PATH,
 #                              norm_l7_path, l7_path
-                            #  )
-from scipy.spatial import distance
-import skbio
+#  )
 
-from functions import split_train_test
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 320)
@@ -39,346 +32,276 @@ pd.set_option('display.width', 320)
 # l6_path = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/feature-table-l6.csv"
 # META_PATH = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/edited_metadata.csv"
 
-norm_l6_project = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/FeatureTableNew.tsv"
-META_PATH = "/mnt/c/Users/dviri/google_drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/metadataNew.tsv"
+norm_l6_project = "/mnt/g/My Drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/FeatureTableNew.tsv"
+META_PATH = "/mnt/g/My Drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/nb/data/metadataNew.tsv"
 
-def get_tt_data(merge_df, split_control=True, train_ratio=0.85):
-    """
-    Return a tuple of control_train_df,control_test_df,test_df
-    """
-    merged_training_df = get_merged_tt_df(merge_df, split_control, train_ratio)
-    test_df = merged_training_df[merged_training_df.tt == 'test']
-    if split_control:
-        control_train_df = merged_training_df[merged_training_df.tt == 'control_train']
-        control_test_df = merged_training_df[merged_training_df.tt == 'control_test']
-        return control_train_df, control_test_df, test_df
-    else:
-        train_df = merged_training_df[merged_training_df.tt == 'train']
-        return train_df, test_df
+@dataclass
+class TopFeatures:
+    importance: InitVar[np.ndarray]
+    indices: InitVar[np.ndarray]
+    sorted_features: np.ndarray
+    sorted_importance:Optional[np.ndarray] = field(init=False)
 
+    def __post_init__(self, importance, indices):
+        self.sorted_features = importance[indices]
 
-def build_trainig_data(merge_df, meta_idx, test_size=0.25, split_by_control=False):
-    if split_by_control:
-        # Don't know where na symtpoms should go. Drop them
-        na_symptoms = merge_df[pd.isna(merge_df.symptoms)]
-        merge_df = merge_df.drop(na_symptoms.index)
-        control_data = merge_df[merge_df.symptoms == "Control"]
-        ap_data = merge_df.drop(control_data.index)  # Everyone that is not control group
-
-        X_train = ap_data.iloc[:, :meta_idx].values
-        X_test = control_data.iloc[:, :meta_idx].values
-
-        meta_train = ap_data.iloc[:, meta_idx:]
-        y_train = meta_train.loc[:, 'visit_age_mo'].values
-
-        meta_test = control_data.iloc[:, meta_idx:]
-        y_test = meta_test.loc[:, 'visit_age_mo'].values
-
-        control_data = control_data.groupby(['record_id']).apply(lambda x: split_is_train(x, 1 - test_size))
-        X_control_train = control_data.loc[control_data.is_train].iloc[:, :meta_idx]
-        y_control_train = control_data.loc[control_data.is_train].iloc[:, meta_idx:].loc[:, 'visit_age_mo'].values
-
-        X_control_test = control_data.drop(X_control_train.index).iloc[:, :meta_idx]
-        y_control_test = control_data.drop(X_control_train.index).iloc[:, meta_idx:].loc[:, 'visit_age_mo'].values
-
-        return {"X_train": X_train, "X_test": X_test, "y_train": y_train, 'y_test': y_test,
-                "X_control_train": X_control_train,
-                "y_control_train": y_control_train,
-                "X_control_test": X_control_test,
-                "y_control_test": y_control_test,
-                "control_data": control_data,
-                'ap_data': ap_data
-                }
-    else:
-        ap_data = merge_df
-        X = merge_df.iloc[:, :meta_idx].values
-        meta = merge_df.iloc[:, meta_idx:]
-        y = meta.loc[:, 'visit_age_mo'].values
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=666)
-
-        return {"X_train": X_train, "X_test": X_test, "y_train": y_train, 'y_test': y_test}
+    class Config:
+        arbitrary_types_allowed = True
 
 
-def quantaize_age_mo(metadata: pd.DataFrame, r_factor: int = 5, print_hist=False, inplace=False) -> pd.DataFrame:
-    """ Given a rounding factor, will round the decimal point of the age in month to the decimal rounoding of that number.
-    for example for r_factor 5 (default) and numbers 0.1,0.2,0.3,0.4,0.5,0.8 will return the list of 0.0,0.5,0.5,0.5,0.5,1.0,
-    if print_hist is True, will print histogram of new df visit_age_mo
-    """
+class MyTreeModel:
+    def __init__(self, runner: GmapRunner):
+        self.runner: GmapRunner = runner
+        self.merged_predict_df: Optional[pd.DataFrame] = None
+        self.model: Union[RandomForestClassifier, RandomForestRegressor, None] = None
+        self._top_features: Optional[TopFeatures] = None
 
-    meta_copy = metadata.copy() if not inplace else metadata
-    meta_copy.visit_age_mo = ((meta_copy.visit_age_mo / r_factor).round(1) * r_factor).round(1)
-    if print_hist:
-        unique_visit_mo = meta_copy.groupby('visit_age_mo')['sampleID'].nunique()
-        print(unique_visit_mo)
-        unique_visit_mo.hist()
+    @property
+    def top_features(self):
+        return self._top_features
 
-    return meta_copy
-
-
-def evaluate(model, features, labels, err_margin=0.3, verbose=True):
-    predictions = model.predict(features)
-    loss = abs(predictions - labels)
-    succ = np.count_nonzero(loss < err_margin) / len(loss)
-
-    if verbose:
-        print('Model Performance')
-        print('Average Error: {:0.4f} .'.format(np.mean(loss)))
-        print('Accuracy = {:0.2f}%.'.format(succ))
-
-    return succ
+    def get_top_features(self, k=20):
+        assert self.model is not None, "Must first fit model"
+        data_df = self.runner.get_data(remove_meta=True)
+        importance = self.model.feature_importances_
+        indices = np.argsort(importance)[::-1]
+        features = data_df.columns[indices]
+        top_features = features[:k]
+        self._top_features = TopFeatures(importance, indices, features)
+        return top_features.tolist()
 
 
-def get_random_search_parameters():
-    # Number of trees in random forest
-    n_estimators = [int(x) for x in np.linspace(start=200, stop=2000, num=10)]
-    # Number of features to consider at every split
-    max_features = ['auto', 'sqrt']
-    # Maximum number of levels in tree
-    max_depth = np.linspace(10, 100, num=5, dtype=int).tolist() + [None]
-    # Minimum number of samples required to split a node
-    min_samples_split = [5, 10, 20, 40]
-    # Minimum number of samples required at each leaf node
-    min_samples_leaf = [2, 4, 6, 10]
-    # Method of selecting samples for training each tree
-    bootstrap = [True, False]
+class ClassificationRunner(MyTreeModel):
+    best_params = {'random_state': 666,
+                   'n_estimators': 1200,
+                   'min_samples_split': 20,
+                   'min_samples_leaf': 2,
+                   #  'max_features': 'sqrt',
+                   'max_depth': None,
+                   'bootstrap': False}
 
-    # Create the random grid
-    random_grid = {'n_estimators': n_estimators,
-                   'max_features': max_features,
-                   'max_depth': max_depth,
-                   'min_samples_split': min_samples_split,
-                   'min_samples_leaf': min_samples_leaf,
-                   'bootstrap': bootstrap,
-                   'random_state': [666]}
-    return random_grid
+    def __init__(self, runner: GmapRunner) -> None:
 
+        super().__init__(runner)
+        self.noise_func = None
+        self.acc = dict()
+        self.loss = dict()
+        self.wanted_label = 'sample_time'
+        # self.setup_training_data()
 
-def draw_regresssion(merged_training_df, test_map, fig, name='regression', pred_name='predict'):
-    regr, X = get_linear_regressor(merged_training_df, test_map, pred_name, return_data=True)
-    reg_predict = regr.predict(X)
-    fig.add_trace((go.Scatter(x=X[:, 0], y=reg_predict,
-                              mode='lines',
-                              name=name,
-                              line=dict(width=3))))
-    return fig
-
-
-def draw_xy_line(fig, max_x=14, line_width=3):
-    """
-    Draw x=y line on figure frin x=0 to x=max_x
-    """
-    x = list(np.arange(0, max_x))
-    fig.add_trace((go.Scatter(x=x, y=x,
-                              mode='lines',
-                              name='label',
-                              line=dict(width=line_width))))
-    return fig
-
-
-def calc_regressor_control(merge_df, params, n_samples=20, err_margin=1.0,
-                           print_accuracy=True, split_control=True, train_ratio=0.8):
-    if split_control:
-        loss_lst = [list(), list(), list()]
-        acc_lst = [list(), list(), list()]
-    else:
-        loss_lst = [list(), list()]
-        acc_lst = [list(), list()]
-
-    best_features = list()
-    for i in tqdm(range(n_samples)):
-        data = get_tt_data(merge_df, split_control=split_control, train_ratio=train_ratio)
-        #     control_train_df,control_test_df,test_df = get_tt_data()
-        X_train = data[0].iloc[:, :meta_idx].values
-        y_train = data[0].visit_age_mo
-        best_model = RandomForestRegressor(**params)
-        best_model.fit(X_train, y_train)
-
-        for i in range(len(acc_lst)):
-            X = data[i].iloc[:, :meta_idx].values
-            y = data[i].visit_age_mo
-            predict = best_model.predict(X)
-
-            label = y
-            loss_arr = abs(predict - label)
-            succ = np.count_nonzero(loss_arr < err_margin) / len(loss_arr)
-            loss = np.mean(loss_arr)
-
-            loss_lst[i].append(loss)
-            acc_lst[i].append(succ)
-
-        importances = best_model.feature_importances_
-        regress_indices = np.argsort(importances)[::-1]
-        best_features.append(regress_indices)
-
-    if print_accuracy:
-        regr_print_avg_acc(loss_lst, acc_lst, split_control)
-
-    return loss_lst, acc_lst, best_features
-
-
-def regr_print_avg_acc(loss_lst, acc_lst, split_control):
-    df_enum = ["control_train_df", "control_test_df", "test_df"]
-    for i in range(len(loss_lst)):
-        print(df_enum[i])
-        print(f"AVG loss = {(np.sum(loss_lst[i]) / len(acc_lst[i])).round(2)}")
-        print(f"AVG acc = {(np.sum(acc_lst[i]) / len(acc_lst[i])).round(2)}")
-        print(f"MIN acc = {np.min(acc_lst[i]).round(2)}")
-        print(f"MAX acc = {np.max(acc_lst[i]).round(2)}")
-        print()
-
-
-def get_gmap_data(data_path: str):
-    """
-    return merge_df,meta_idx
-    """
-    otu_data = pd.read_csv(data_path, sep='\t', index_col=['OTU ID'])
-    examples_data = otu_data.T
-    metadata = pd.read_csv("./data/edited_metadata.csv", sep='\t')
-    merge_df = examples_data.merge(metadata, left_index=True, right_on=['sampleID'])
-    merge_df = merge_df.assign(is_control=(merge_df.symptoms == 'Control'))
-    meta_idx = examples_data.shape[1]
-    return merge_df, meta_idx
-
-
-def get_confusion_matrix(df, pred, cls_wanted, classes_arr=None, return_count=False):
-    """
-
-    Args:
-        df:
-        pred:
-        classes_arr: Array of classes in the way you want it to be sorted. if not passed, will use python default sort
-        fir the classes
-
-    Returns:
-
-    """
-    if classes_arr is None:
-        # classes_arr = DEFAULT_ST_SORTED_ARRAY
-        classes_arr = df[cls_wanted].unique().astype(list)
-
-    df_mapping = pd.DataFrame({cls_wanted: classes_arr})
-    sort_mapping = df_mapping.reset_index().set_index(cls_wanted)
-
-    pred_merge_df = df.copy()
-    pred_merge_df['pred_names'] = pred
-    num_cls_name = f'{cls_wanted}_num'
-
-    pred_merge_df[num_cls_name] = pred_merge_df['kmeans_label'].map(sort_mapping['index'])
-    pred_merge_df['kmeans_label'].unique(), pred_merge_df[num_cls_name].unique()
-    pred_merge_df['pred_names_num'] = pred_merge_df['pred_names'].map(sort_mapping['index'])
-
-    pred_s = pd.Series(pred_merge_df.sample_time_num, name='pred')
-    label_s = pd.Series(pred_merge_df.pred_names_num, name='label')
-
-    ct = pd.crosstab(label_s, pred_s, normalize='index')
-    mapping_dict = df_mapping.to_dict()[cls_wanted]
-    ct = ct.rename(columns=mapping_dict, index=mapping_dict)
-
-    if not return_count:
-        return ct
-
-    cnt = pd.crosstab(label_s, pred_s)
-    mapping_dict = df_mapping.to_dict()[cls_wanted]
-    cnt = cnt.rename(columns=mapping_dict, index=mapping_dict)
-    return ct, cnt
-
-
-class GmapRunner:
-    def __init__(self, data_path, split_control=False, train_ratio=0.85, metadata_path=META_PATH):
-        self.data_path = data_path
-        self.split_control = split_control
-        self.merge_df = None  # type: pd.DataFrame
-        self.metadata_path = metadata_path
-        self.train_ratio = train_ratio
-
-    def init_data(self, split_control: bool = None, split_tt=True):
-        split_control = self.split_control if split_control is None else split_control
-
-        examples_data = pd.read_csv(self.data_path, sep='\t', index_col=['OTU ID']).T
-        metadata = pd.read_csv(self.metadata_path, sep='\t')
-        merge_df = examples_data.merge(metadata, left_index=True, right_on=['sampleID'])
-        merge_df = merge_df.assign(is_control=(merge_df.symptoms == 'Control'))
-        meta_idx = examples_data.shape[1]
-
-        self.merge_df = merge_df
-        self.meta_idx = meta_idx
-
-        if split_tt:
-            self.update_tt(split_control)
-
-    def get_data(self):
-        return self.merge_df
-
-    def get_meta_idx(self):
-        return self.meta_idx
-
-    def update_tt(self, split_control=None, train_ratio=None):
+    # def foo(self,x):
+    #     if len(x) > 1:
+    #         print('wow')
+    # def get_
+    def predict(self, wanted_label: str = None, dropna=True):
+        """ Train and predict on a regression model with the regress_params.
+        Add the columns predict,label,loss to the dataframe and return it.
         """
-        Add tt division for the given dataframe with ratio. group by record_id to make sure same baby won't be both in train and test.
-        """
-        split_control = split_control if split_control is not None else self.split_control
-        train_ratio = train_ratio if train_ratio is not None else self.train_ratio
-        self.merge_df = self.merge_df.groupby(['is_control', 'record_id']).apply(
-            lambda x: split_train_test(x, split_control, train_ratio)).reset_index(drop=True)
+        runner = self.runner
+        wanted_label = self.wanted_label if wanted_label is None else wanted_label
+        X, y = runner.get_tain_data(wanted_label=wanted_label)
 
-    def update_merge_df(self, rows_map, split_tt=False):
-        """
+        meta_idx = runner.get_meta_idx()
+        merge_df = runner.get_data()
 
+        if dropna:
+            nan_map = y.isna()
+            X = X[~nan_map]
+            y = y[~nan_map]
+            merge_df = merge_df.dropna(subset=[wanted_label], inplace=False)
+
+        model = RandomForestClassifier(**self.best_params)
+        logger.info(f"Fitting model to {X.shape} examples")
+        model.fit(X, y)
+
+        merged_training_df = merge_df
+        predict_data = merged_training_df.iloc[:, :meta_idx].values
+        predict = model.predict(predict_data)
+        label = merged_training_df[wanted_label]
+
+        merged_training_df = merged_training_df.assign(predict=predict, label=label)
+        self.merged_predict_df = merged_training_df
+        self.model = model
+        return self.merged_predict_df
+
+    def calc_loss(self, verbose=True):
+        merged_predict_df = self.merged_predict_df
+        for tt in ['train', 'test']:
+            df = merged_predict_df[merged_predict_df.tt == tt]
+            label = df.label
+            predict = df.predict
+            accuracy = accuracy_score(label, predict)
+            self.acc[tt] = accuracy
+            if verbose:
+                logger.info(f"{tt} acc, loss: {self.acc[tt]}\t ")
+
+    def get_classifier_accuracy(self, merge_df_tt, return_all=False):
+        """get Classification classifier accuracy by training on the given dataframe.
         Args:
-            rows_map:
-            split_tt: If set to True, will update the tt. It is recommended setting to True if removed rows
-
+            split_tt: If True, will give the merge_df_tt a new tt assignment. Otherwise, assume that the DataFrame already
+            has tt and uses it.
+            return_all: If true, will return a dictionary with "test_pred", "train_pred", "merge_df_tt"
         Returns:
-
+            train_acc,test_acc
         """
-        self.merge_df = self.merge_df.loc[rows_map]
+        if merge_df_tt is None:
+            merge_df_tt = self.merged_predict_df
+        else:
+            assert 'tt' in merge_df_tt, "Must pass a df with 'tt' division if split_tt is False "
 
-        if split_tt:
-            self.update_tt()
+        train_df = merge_df_tt[merge_df_tt.tt == 'train']
+        test_df = merge_df_tt[merge_df_tt.tt == 'test']
 
-        return self.merge_df
+        train_acc = self.acc['train']
+        test_acc = self.acc['test']
+        test_df['pred'] = test_df.pred
+        train_df['pred'] = train_df.pred
+        if return_all:
+            res_dict = {
+                "test_pred": test_df.pred.values,
+                "train_pred": train_df.pred.values,
+                "merge_df_tt": merge_df_tt,
+                "train_df": train_df,
+                "test_df": test_df
+            }
+            return res_dict
 
-    def create_class_by_kmeans(self, classes_arr, new_col_name='kmeans_label'):
-        merge_df_tt = self.merge_df
-        assert 'tt' in merge_df_tt, "Must first split to train/test before running create_class_by_kmeans"
-        X = merge_df_tt.visit_age_mo.to_numpy().reshape(-1, 1)
-        labels = merge_df_tt.sample_time.unique()
-        kmeans = KMeans(n_clusters=len(classes_arr), random_state=666).fit(X)
-        args_res = np.argsort(kmeans.cluster_centers_.reshape(-1))
-        labels = list(map(lambda x: classes_arr[np.where(args_res == x)[0][0]], kmeans.labels_))
-        # labels = list(map(lambda x: np.where(args_res == x)[0][0] ,kmeans.labels_))
-        merge_df_tt = merge_df_tt.assign(**{new_col_name: labels})
-        self.merge_df = merge_df_tt
-        return merge_df_tt
-    
-    def pcoa_dim_reduction(self, i=1, j=2, k=3):
-        df = self.merge_df
-        # df = df.reset_index().rename(columns={'index': 'sample_name'})
-        X = df.iloc[:, :self.meta_idx]
-        Ar_dist = distance.squareform(distance.pdist(X, metric="braycurtis"))  # (m x m) distance measure
-        DM_dist = skbio.stats.distance.DistanceMatrix(Ar_dist, ids=X.index)
-        PCoA = skbio.stats.ordination.pcoa(DM_dist, number_of_dimensions=6)
+        return train_acc, test_acc
 
-        PCoA_samples_df = PCoA.samples
-        dims = PCoA_samples_df.shape[1]
+    def plot_confusion_matrix(self, *args, **kwargs):
+        ct, cnt = self.get_confusion_matrix(*args, **kwargs)
+        c = 'brwnyl'
+        ct = ct.round(3)
+        fig = ff.create_annotated_heatmap(ct.to_numpy().T, x=ct.columns.tolist(), y=ct.columns.tolist(), colorscale=c)
+        fig.update_layout(title_text='Confusion Table - Label(rows)/Pred(cols)', font=dict(size=18))
+        fig['layout']['xaxis']['side'] = 'bottom'
+        fig.show()
 
-        PCoA_samples_df = PCoA.samples
-        dims = PCoA_samples_df.shape[1]
-        col = 'symptoms'
-        # col = 'record_id'
+    def get_confusion_matrix(self, classes_arr=None, label_col='kmeans_label',
+                             normalize='index', rows_as='label',
+                             res_data=None):
+        """
+        test_df: DataFrame in the shape of (N,c) where N is the number of samples the prediciton was made on. Needs to have columns label_col
+        pred: An array of a classifier prediction over which the confusion matrix will be. Need to be in shape (N,)
+        classes_arr: An Array with the classes in the classification. The order the classes will be, is the order in the output table
+        normalize : bool, {'all', 'index', 'columns'}, or {0,1}, default False
+        Normalize by dividing all values by the sum of values.
+        """
+        #     if classes_arr is None:
+        #         classes_arr = ['onemonth', 'twomonth','fourmonth', 'sixmonth', 'ninemonth' , 'oneyear']
+        # label_col = 'symptoms'
+        test_df = self.merged_predict_df.query('tt == "test"')
+        test_df['pred'] = test_df.predict
+        label_col = label_col if label_col is not None else self.wanted_label
+        if res_data is None:
+            res = self.get_classifier_accuracy(test_df, return_all=True)
+        else:
+            res = res_data
+        test_pred = res['test_pred']
+        test_df = res['test_df']
 
-        embedded_X = PCoA_samples_df.rename(columns={f"PC{i}": 'x', f"PC{j}": 'y', f"PC{k}": 'z'})
-        plot_df = pd.concat([df, embedded_X], axis=1)
+        # ct,cnt = get_confusion_matrix(test_df,test_df.pred,test_df[label_col].unique().tolist(), label_col=label_col, return_count=True, normalize = 'index')
+        pred = test_df.pred
+        classes_arr = test_df[label_col].unique().tolist() if classes_arr is None else classes_arr
 
-        embedded_X = embedded_X.assign(**{col: df[col]})
-        # plot_df.record_id = plot_df.record_id.astype(str)
-        # clean_df = plot_df[~plot_df[col].isna()].copy()
-        embedded_X = embedded_X[~embedded_X[col].isna()].copy()
-        fig = px.scatter_3d(embedded_X, x='x', y='y', z='z', color=col)
+        df_mapping = pd.DataFrame({label_col: classes_arr})
+        sort_mapping = df_mapping.reset_index().set_index(label_col)
+
+        pred_merge_df = test_df.copy()
+        pred_merge_df['pred_names'] = pred
+        pred_merge_df['label_num'] = pred_merge_df[label_col].map(sort_mapping['index'])
+        #     pred_merge_df['kmeans_label'].unique(),pred_merge_df['sample_time_num'].unique()
+        pred_merge_df['pred_names_num'] = pred_merge_df['pred_names'].map(sort_mapping['index'])
+
+        label_s = pd.Series(pred_merge_df.label_num, name='label')
+        pred_s = pd.Series(pred_merge_df.pred_names_num, name='pred')
+
+        if rows_as == 'predict':
+            ct = pd.crosstab(pred_s, label_s, normalize=normalize)
+            cnt = pd.crosstab(pred_s, label_s)
+
+            mapping_dict = df_mapping.to_dict()[label_col]
+            ct = ct.rename(columns=mapping_dict, index=mapping_dict)
+            cnt = cnt.rename(columns=mapping_dict, index=mapping_dict)
+
+            # If prediction is missing values, add them here with 0 for count and success
+            missing_rows = list(set(classes_arr) - set(cnt.index))
+            for missing_row in missing_rows:
+                empty_row = pd.Series({k: 0 for k in ct.columns.tolist()}, name=missing_row)
+                ct = ct.append(empty_row, ignore_index=False)
+                cnt = cnt.append(empty_row, ignore_index=False)
+
+
+        elif rows_as == 'label':
+            ct = pd.crosstab(label_s, pred_s, normalize=normalize)
+            cnt = pd.crosstab(label_s, pred_s)
+
+            mapping_dict = df_mapping.to_dict()[label_col]
+            ct = ct.rename(columns=mapping_dict, index=mapping_dict)
+            cnt = cnt.rename(columns=mapping_dict, index=mapping_dict)
+
+            missing_cols = list(set(classes_arr) - set(cnt.columns))
+            # If prediction is missing values, add them here with 0 for count and success
+
+            for missing_col in missing_cols:
+                ct = ct.assign(**{missing_col: 0})
+                cnt = cnt.assign(**{missing_col: 0})
+        #             empty_row = pd.Series({k:0 for k in ct.columns.tolist()},name=missing_col)
+        #             ct = ct.append(empty_row, ignore_index=False)
+        #             cnt = cnt.append(empty_row, ignore_index=False)
+
+        else:
+            raise ValueError(
+                f"Rows as parameter got an unknown argument. possibilities are predict \ label but got {rows_as}")
+        ct = ct.loc[sorted(ct, key=classes_arr.index), sorted(ct, key=classes_arr.index)]
+        cnt = cnt.loc[sorted(cnt, key=classes_arr.index), sorted(cnt, key=classes_arr.index)]
+        return ct, cnt
+
+    def plot_classification_scatter(self, labels_mapping):
+        meta_idx = self.runner.get_meta_idx()
+
+        test_df = self.merged_predict_df.query('tt == "test"')
+        X_test = test_df.iloc[:, :meta_idx].values
+        test_pred = test_df.predict.values
+        pred_proba = self.model.predict_proba(X_test)
+        max_proba = np.max(pred_proba, axis=1)
+        test_df['max_proba'] = max_proba
+        test_df['pred'] = test_pred
+        # px.strip(test_df,x='kmeans_label',y='max_proba')
+
+        test_df.pred = test_df.pred.map(lambda x: labels_mapping[x])
+        test_df.kmeans_label = test_df.kmeans_label.map(lambda x: labels_mapping[x])
+        fig = px.strip(test_df, x='pred', y='max_proba', color='kmeans_label',
+                       custom_data=['sampleID', 'symptoms', 'visit_age_mo'],
+                       category_orders={'pred': list(labels_mapping.values())}
+                       )
+
+        fig.update_traces(
+            hovertemplate="<br>".join([
+                "predict %{x}, probability: %{y}",
+                "sampleID: %{customdata[0]}",
+                "symptom: %{customdata[1]}",
+                "real age: %{customdata[2]}"
+            ])
+        )
         return fig
 
+    def get_classification_random_function(self, merged_training_df, label_name='sample_time', n_bins=50):
+        meta_idx = self.runner.get_meta_idx
+        X = merged_training_df.iloc[:, :meta_idx].values
+        counts = merged_training_df[label_name].value_counts()
+        values = counts.values
+        bins = counts.index
+        #     values, bins = np.histogram(label, bins=len(np.unique(label))-1)
+        prob = values / np.sum(values)
+        #     import ipdb;ipdb.set_trace()
+        return lambda size: np.random.choice(bins, size=size, p=prob)
 
-class RegressionRunner:
+    def cat_to_bin(classes_arr):
+        return lambda x: 'onemonth' if classes_arr.index(x) < 3 else 'oneyear'
+
+
+class RegressionRunner(MyTreeModel):
     best_params = {
         'random_state': 666,
         'n_estimators': 1800,
@@ -396,147 +319,32 @@ class RegressionRunner:
         self.acc = dict()
         self.loss = dict()
 
-        self.setup_training_data()
-        
+        # self.setup_training_data()
 
-    def setup_training_data(self):
-        runner = self.runner
-        meta_idx = runner.get_meta_idx()
-        merge_df = runner.get_data()
-        self.setup_xy_train(merge_df,meta_idx)
-        
-
-    def setup_xy_train(self,merge_df,meta_idx):
-        assert 'tt' in merge_df, "Must first split to tt before using this function"
-        train_df = merge_df[merge_df.tt == 'train']
-        self._train_X = train_df.iloc[:, :meta_idx].values
-        self._train_y = train_df.visit_age_mo
-        
-    def add_training_noise(self, noise_type,add_data=True, **kwargs):
-        X = self._train_X.copy()
-        y = self._train_y.copy()
-        if noise_type == 'normal':
-            noise =  np.random.normal(**kwargs,size=X.shape)
-            X = (X + noise)
-            X = X/X.sum(axis=0,keepdims=1)
-        elif noise_type == 'label':
-            noise =  np.random.normal(**kwargs,size=y.shape)
-            y += noise
-            y = np.maximum(y,0)
-        elif noise_type == 'interpulate':
-            runner = self.runner
-            meta_idx = runner.get_meta_idx()
-            merge_df = runner.get_data()
-            # merge_df.groupby(['record_id','visit_age_mo']).apply(self.foo)
-            train_df = merge_df[merge_df.tt == 'train']
-            gb_records_symptoms = train_df.groupby(['record_id','symptoms'])
-            interpulate_df = gb_records_symptoms.apply(lambda x: self.interpulate_group(x,**kwargs))
-            add_data = False
-            self.setup_xy_train(interpulate_df,meta_idx)
-            return
-
-        if add_data:
-            self._train_X = np.concatenate([self._train_X,X])
-            self._train_y = np.concatenate([self._train_y,y])
-        else:
-            self._train_X = X
-            self._train_y = y
-    
     # def foo(self,x):
     #     if len(x) > 1:
     #         print('wow')
-
-    def interpulate_group(self,group_df,num_extra_samples = 1, interp_interval=0.1,kind='cubic'):
-        meta_idx = self.runner.meta_idx
-        group_df = group_df.sort_values(['visit_age_mo'],ascending=True)
-        data_df: pd.DataFrame = group_df.iloc[:,:meta_idx]
-        data = data_df.to_numpy()
-
-        if len(data) < 2:
-            return group_df
-        if len(data)< 16 and kind == 'cubic':
-            kind = 'linear'
-            logger.info("Can't use cubic interpulation for less than 16 examples")
-        y = group_df.visit_age_mo.to_numpy()
-        x = np.arange(0,data.shape[1],1)
-
-        
-        f = interpolate.interp2d(x,y,data,kind)
-        pd.DataFrame(data)
-
-        ynew = np.arange(y.min(),y.max()+interp_interval,interp_interval).round(1)
-        xnew = np.arange(0,data.shape[1],1)
-        interp_data = f(xnew,ynew)
-        interp_data = np.where(np.isnan(interp_data),0,interp_data)
-        # print(data.shape, interp_data.shape, x.shape,y.shape,xnew.shape,ynew.shape)
-        inter_df = pd.DataFrame(interp_data.round(3))
-        inter_df.columns = group_df.iloc[:,:meta_idx].columns
-        inter_df['visit_age_mo'] = ynew
-
-        new_interpulation_rows_df = inter_df[~inter_df.visit_age_mo.isin(group_df.visit_age_mo)] #remove original values
-        new_interpulation_rows_df['source'] = 'interp'
-        group_df['source'] = 'data'
-        res_df = pd.concat([new_interpulation_rows_df,group_df])
-        res_df = res_df.sort_values(['visit_age_mo']).reset_index(drop=True)
-
-        final_df = self.extract_equale_interval_samples(num_extra_samples, res_df)
-
-        self.draw_interp_results(final_df)
-        return final_df
-
-    def extract_equale_interval_samples(self, num_extra_samples, res_df):
-        idxs = res_df[res_df.source == 'data'].index
-        res_df.tt = res_df.tt.dropna().unique()[0]
-        ranges = idxs[1:] - idxs[:-1]
-        intervals = ranges // (num_extra_samples + 1)
-        mul_range = np.arange(1, num_extra_samples + 1)[np.newaxis, :]
-        samples_jumps = np.tile(mul_range, (len(ranges), 1))
-        take_idxs = (samples_jumps * intervals[np.newaxis, :].T) + idxs[:-1, np.newaxis]
-        take_idxs = np.concatenate([take_idxs.ravel(), idxs])
-        final_df = res_df.iloc[take_idxs].sort_values(['visit_age_mo']).reset_index(drop=True)
-        return final_df
-
-    def draw_interp_results(self, df):
-        
-        data = df.iloc[:,:self.runner.get_meta_idx()]
-        orig_data_full = df[df.source == 'data']
-        orig_data = orig_data_full.iloc[:,:self.runner.get_meta_idx()]
-        sort_arg = np.argsort(data.sum(axis=0))
-        data:pd.DataFrame = data.iloc[:,sort_arg[::-1]].reset_index(drop=True)
-        orig_data:pd.DataFrame = orig_data.iloc[:,sort_arg[::-1]].reset_index(drop=True)
-        data_np = data.to_numpy()
-        orig_data_np = orig_data.to_numpy()
-        plot = plt.plot(df.visit_age_mo,data_np[:,0],'ro-')
-        plt.show()
-        plot = plt.plot(orig_data_full.visit_age_mo,orig_data_np[:,0],'bo-')
-        plt.show()
-        plot = plt.plot(df.visit_age_mo,data_np[:,0],'ro-',orig_data_full.visit_age_mo,orig_data_np[:,0],'b-')
-        plt.show()
-        print()
-
     # def get_
-    def calc_loss(self,err_margin):
+    def calc_loss(self, err_margin):
         merged_predict_df = self.merged_predict_df
-        for tt in ['train','test']:
+        for tt in ['train', 'test']:
             df = merged_predict_df[merged_predict_df.tt == tt]
             label = df.label
             predict = df.predict
-            loss_arr = abs(predict-label)
+            loss_arr = abs(predict - label)
             self.acc[tt] = np.count_nonzero(loss_arr < err_margin) / len(loss_arr)
-            self.loss[tt] =  np.mean(loss_arr)
-            print(f"{tt} acc, loss:\n", self.acc[tt],self.loss[tt])
+            self.loss[tt] = np.mean(loss_arr)
+            logger.info(f"{tt} acc, loss: {self.acc[tt]}\t {self.loss[tt]}")
 
-    def predict(self,err_margin=0.1):
+    def predict(self):
         """ Train and predict on a regression model with the regress_params. 
         Add the columns predict,label,loss to the dataframe and return it.
         """
         runner = self.runner
-        X = self._train_X
-        y = self._train_y
+        X, y = runner.get_tain_data()
 
         meta_idx = runner.get_meta_idx()
         merge_df = runner.get_data()
-        
 
         regression_model = RandomForestRegressor(**self.best_params)
         # if add_noise:
@@ -550,7 +358,7 @@ class RegressionRunner:
 
         predict = regression_model.predict(merged_training_df.iloc[:, :meta_idx].values)
         label = merged_training_df.visit_age_mo
-        loss_arr = abs(predict-label)
+        loss_arr = abs(predict - label)
         merged_training_df = merged_training_df.assign(predict=predict, label=label, loss=loss_arr)
         self.merged_predict_df = merged_training_df
         return self.merged_predict_df
@@ -561,10 +369,10 @@ class RegressionRunner:
         label = merged_training_df.visit_age_mo
 
         values, bins = np.histogram(label, bins=n_bins)
-        prob = values/np.sum(values)
+        prob = values / np.sum(values)
         return lambda size: np.random.choice(bins[1:], size=size, p=prob)
 
-    def draw_regresssion_line(self,fig, regr_data, name='regression',pred_name = 'predict', color=None):
+    def draw_regresssion_line(self, fig, regr_data, name='regression', pred_name='predict', color=None):
         """Draw a regression line on a figure
 
         Args:
@@ -577,19 +385,19 @@ class RegressionRunner:
         Returns:
             [type]: The new figure with the regression line
         """
-        regr,X = self.get_linear_regressor(regr_data,pred_name,return_data=True)
+        regr, X = self.get_linear_regressor(regr_data, pred_name, return_data=True)
         reg_predict = regr.predict(X)
-        fig.add_trace((go.Scatter(x=X[:,0], y=reg_predict,
-                            mode='lines',
-                            name=name,
-                                marker={"color":color},
-                            line=dict(width=3))))
+        fig.add_trace((go.Scatter(x=X[:, 0], y=reg_predict,
+                                  mode='lines',
+                                  name=name,
+                                  marker={"color": color},
+                                  line=dict(width=3))))
         return fig
-    
+
     def get_linear_regressor(self, regr_data, pred_name, return_data=False):
         #     test_map = merged_training_df.tt == 'test'
         meta_idx = self.runner.get_meta_idx()
-        
+
         # training_data = merged_training_df.iloc[:, :meta_idx].loc[test_map]
         assert len(regr_data) > 0, "test map didn't return any data point"
         predict = regr_data[pred_name]
@@ -619,46 +427,119 @@ class RegressionRunner:
             [type]: [description]
         """
         merged_training_df = self.merged_predict_df
-        merged_training_df.loc[pd.isna(merged_training_df.symptoms),'symptoms']='unknown'
-        fig = px.scatter(merged_training_df,x='visit_age_mo',y='predict',color='tt',custom_data=['symptoms','sampleID'])
+        merged_training_df.loc[pd.isna(merged_training_df.symptoms), 'symptoms'] = 'unknown'
+        fig = px.scatter(merged_training_df, x='visit_age_mo', y='predict', color='tt',
+                         custom_data=['symptoms', 'sampleID'])
 
         if draw_lines:
             for data in fig['data']:
                 legendgroup = data['legendgroup']
-                regr_data = merged_training_df[merged_training_df.tt ==legendgroup]
-                self.draw_regresssion_line(fig,regr_data,f'{legendgroup} regression',color=data['marker']['color'])
+                regr_data = merged_training_df[merged_training_df.tt == legendgroup]
+                self.draw_regresssion_line(fig, regr_data, f'{legendgroup} regression', color=data['marker']['color'])
 
         if show:
             fig.show()
         return fig
 
-def main():
-    runner = GmapRunner(norm_l6_project, split_control=False, train_ratio=0.8)
-    runner.init_data()
 
-    for i in range(6):
-        logger.info(f"Predicting for i {i}")
+class Randomizer:
+    def __init__(self, name: str, randomize_dict: dict, chance_deactivate=0.3):
+        self.randomize_dict = randomize_dict
+        self.chance_deactivate = chance_deactivate
+        self.name = name
+
+    def activate(self, method: Callable, verbose=True):
+        to_activate = np.random.rand() > self.chance_deactivate
+        if not to_activate:
+            if verbose:
+                logger.info(f"No random for {self.name}")
+            return
+
+        params_dict = dict()
+        for param, param_options in self.randomize_dict.items():
+            params_dict[param] = self._set_random_param(param_options)
+
+        if verbose:
+            logger.info(f"{self.name} Random values: {params_dict}")
+        method(**params_dict)
+
+    def _set_random_param(self, param_options: list):
+        option_idx = np.random.randint(0, len(param_options))
+        return param_options[option_idx]
+
+
+rand_interp_dict = dict(
+    num_extra_samples=np.arange(1, 8),
+    interp_interval=np.arange(0.05, 0.9, 0.05),
+    noise_type=['interpulate']
+
+)
+rand_label_noise_dict = dict(
+    loc=[0],
+    scale=np.arange(0.1, 1.0, 0.1),
+    noise_type=['label']
+)
+
+
+def draw_results(logger_path):
+    with open(logger_path, 'r') as f:
+        file_txt = f.read()
+
+    import re
+    train_acc, train_loss = np.array(re.findall(r'train acc.* ([0-9]*[.]\d*)\s*([0-9]*[.]\d*)', file_txt)).T.astype(
+        float).round(3)
+    test_acc, test_loss = np.array(re.findall(r'test acc.* ([0-9]*[.]\d*)\s*([0-9]*[.]\d*)', file_txt)).T.astype(
+        float).round(3)
+    x = np.arange(0, len(test_acc))
+    # fig = plt.plot(x, test_acc,"ro",x,train_acc,"b")
+
+    # plt.plot(x, test_acc, "ro",0,test_acc[0],'bo')
+    plt.plot(test_loss, test_acc, "ro", test_loss[0], test_acc[0], 'bo')
+    plt.plot(train_acc, test_acc, "ro", train_acc[0], test_acc[0], 'bo')
+
+    # plt.yscale('log')
+    plt.show()
+
+    """
+        2021-07-26 11:07:28.853 | INFO     | __main__:activate:657 - interp Random values: {'num_extra_samples': 1, 'interp_interval': 0.2, 'noise_type': 'interpulate'}
+    2021-07-26 11:07:30.471 | INFO     | __main__:activate:657 - label Random values: {'loc': 0, 'scale': 0.9, 'noise_type': 'label'}
+    2021-07-26 11:07:30.472 | INFO     | __main__:activate:649 - No random for label2
+    2021-07-26 11:07:30.472 | INFO     | __main__:predict:549 - Fitting model to (2616, 78) examples
+    2021-07-26 11:07:42.233 | INFO     | __main__:calc_loss:531 - train acc, loss: 0.9895287958115183	 0.3161243251148097
+    2021-07-26 11:07:42.234 | INFO     | __main__:calc_loss:531 - test acc, loss: 0.45789473684210524	 1.5470459900605174
+    """
+
+
+def random_search_augmentations():
+    """ Performs a random search on multiple autmentaitons options to get the best parameters to maximize the accuracy
+
+    """
+    from datetime import datetime
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    logger_path = f"./logs/logging_{ts}.log"
+    logger.add(logger_path)
+    runner = GmapRunner(norm_l6_project, split_control=False, train_ratio=0.8)
+    runner.init_data('visit_age_mo')
+    inter_rand = Randomizer("interp", rand_interp_dict, chance_deactivate=0.1)
+    label_noise_rand = Randomizer("label", rand_label_noise_dict, chance_deactivate=0.3)
+    label_noise_rand2 = Randomizer("label2", rand_label_noise_dict, chance_deactivate=0.85)
+    for i in range(10):
         regr_runner = RegressionRunner(runner)
-        
-        regr_runner.add_training_noise("interpulate",num_extra_samples=3, interp_interval=0.1*(i+1))
+
+        if i == 0:
+            logger.info("No augmentations")
+            regr_runner.predict()
+            regr_runner.calc_loss(1)
+            continue
+
+        inter_rand.activate(runner.add_training_noise)
+        label_noise_rand.activate(runner.add_training_noise)
+        label_noise_rand2.activate(runner.add_training_noise)
+
         regr_runner.predict()
         regr_runner.calc_loss(1)
-    
-    for i in range(5):
-        logger.info(f"Predicting for i {i}")
-        regr_runner = RegressionRunner(runner)
-        # if i > 0:
-            # regr_runner.add_training_noise("normal",loc=0,scale=0.05)
-            # if i > 1:
-            #     regr_runner.add_training_noise("label",loc=0,scale=0.5)
-        
-        regr_runner.add_training_noise("interpulate",num_extra_samples=i+1)
-        regr_runner.predict()
-        regr_runner.calc_loss(1)
-            
-        # regr_runner.draw_regression_results(draw_lines=True)
-    pass
-    # runner.update_merge_df(rows_map=runner.merge_df.sample_time != 'sick',split_tt=True)
+
+    draw_results(logger_path)
 
 
 def main_old():
@@ -731,8 +612,95 @@ def cat_to_bin(classes_arr):
     return lambda x: 'onemonth' if classes_arr.index(x) < 3 else 'oneyear'
 
 
+def main():
+    from datetime import datetime
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    logger_path = f"./logs/logging_{ts}.log"
+    logger.add(logger_path)
+    runner = GmapRunner(norm_l6_project, split_control=False, train_ratio=0.8)
+    runner.init_data('symptoms')
+    inter_rand = Randomizer("interp", rand_interp_dict, chance_deactivate=0.1)
+    label_noise_rand = Randomizer("label", rand_label_noise_dict, chance_deactivate=0.3)
+    label_noise_rand2 = Randomizer("label2", rand_label_noise_dict, chance_deactivate=0.85)
+
+    clf_runner = ClassificationRunner(runner)
+    clf_runner.predict()
+    clf_runner.calc_loss()
+
+    meta_df = runner.get_data()
+    meta_idx = runner.get_meta_idx()
+    best_featuers = [28, 24, 65, 66, 34, 23, 22]  # From paper
+    filt_meta_idx = len(best_featuers)
+    filt_df = meta_df.iloc[:, best_featuers]
+    filt_df = pd.concat([filt_df, meta_df.iloc[:, meta_idx:]], axis=1)
+    allergy = 'allergy'
+    filt_df.symptoms = filt_df.symptoms.map(
+        {'Symptomatic': allergy, 'Pre-symptoms': allergy, 'Control': 'Control', 'Resolved': 'Control'})
+
+    runner.set_data_df(filt_df, filt_meta_idx, True)
+    # runner.add_training_noise(noise_type='label', loc=0, scale=0.9)
+    _ = clf_runner.predict()
+    clf_runner.calc_loss()
+
+    runner.add_training_noise('interpulate', num_extra_samples=3, interp_interval=0.1)
+    classes_arr = ['initial', 'middle', 'year']
+    _ = runner.create_class_by_kmeans(classes_arr, new_col_name='kmeans_label')
+    _ = clf_runner.predict(wanted_label='kmeans_label')
+    clf_runner.calc_loss()
+
+    ct, cnt = clf_runner.get_confusion_matrix()
+    num_labels = ['0-4', '5-9', '9-14']
+    num_labels = ['0-1', '2', '4', '6', '9', '12']
+    classes_arr = ['onemonth', 'twomonth', 'fourmonth', 'sixmonth', 'ninemonth', 'oneyear']
+    labels_mapping = {k: f"{k}({num_labels[i]})" for i, k in enumerate(classes_arr)}
+    fig = clf_runner.plot_classification_scatter(labels_mapping=labels_mapping)
+    fig.show()
+    runner.reset_data_df()
+    clf_runner.predict()
+    clf_runner.calc_loss()
+    # for i in range(1000):
+    #     regr_runner = RegressionRunner(runner)
+    #
+    #     if i == 0:
+    #         logger.info("No augmentations")
+    #         regr_runner.predict()
+    #         regr_runner.calc_loss(1)
+    #         continue
+    #
+    #     inter_rand.activate(runner.add_training_noise)
+    #     label_noise_rand.activate(runner.add_training_noise)
+    #     label_noise_rand2.activate(runner.add_training_noise)
+    #
+    #     regr_runner.predict()
+    #     regr_runner.calc_loss(1)
+    #
+    # draw_results(logger_path)
+
+
 if __name__ == '__main__':
-    # main()
+    # random_search_augmentations()
     main()
 
+    # from plotnine import ggplot, aes, geom_boxplot, geom_boxplot, geom_point, position_jitter, scale_color_brewer, \
+    #     scale_fill_brewer, theme_bw, theme, xlab
+    # from plotnine import data as nintdata
+    # from statannot import add_stat_annotation
+    # interst_df = pd.read_csv("./py/interst.csv")
+    # # tdf = interst_df[interst_df.groups == 'sick']
+    # colors = ['Blues', 'BuGn', 'BuPu', 'GnBu', 'Greens', 'Greys', 'Oranges', 'OrRd', 'PuBu', 'PuBuGn', 'PuRd',
+    #           'Purples', 'RdPu', 'Reds', 'YlGn', 'YlGnBu', 'YlOrBr', 'YlOrRd']
+    # # ggplot(diamonds, aes(x='cut',y='price')) + geom_boxplot()
+    # res_gg = ggplot(interst_df, aes(x='group', y='CPM', color='group', fill='group')) \
+    #          + geom_boxplot() \
+    #          + geom_point(position=position_jitter(width=0.2), size=2, alpha=0.8) \
+    #          + scale_color_brewer(platte='Set1') \
+    #          + theme_bw() \
+    #          + xlab('Infection/disease status') \
+    #     # + theme(legend_position = "NA")
+    # # + scale_fill_brewer(palette = colors[15])
+    # # p10
+    # fig, p = res_gg.draw(return_ggplot=True, show=False)
+    # axs = fig.get_axes()
+    # axs[0].draw()
+    # plt.show()
 # %%
