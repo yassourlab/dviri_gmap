@@ -15,6 +15,7 @@ META_PATH = "/mnt/g/My Drive/University/Masters/MoranLab/Dvir/GMAP/projects/py/n
 
 from functions import split_train_test
 
+
 class DataSep(Enum):
     All_Samples = 1
     OneSamplePerKidPerTime = 2
@@ -29,6 +30,7 @@ class DataSep(Enum):
 class GmapRunner:
     def __init__(self, data_path, split_control=False, train_ratio=0.85, metadata_path=META_PATH,
                  wanted_label: str = None):
+        self.data_names = None
         self.data_path = data_path
         self.split_control = split_control
         self.merge_df: Optional[pd.DataFrame] = None
@@ -41,15 +43,25 @@ class GmapRunner:
         self._train_X: Optional[np.ndarray] = None
         self._train_y: Optional[np.ndarray] = None
         self._data_sep: Optional[dict] = None
+        self._origin_label = wanted_label
         self.label = wanted_label
+        self._data_cols_idxs: Optional[list] = None
+
+    @property
+    def data_cols_idxs(self):
+        if self._data_cols_idxs is None:
+            self._data_cols_idxs = list(range(self.meta_idx))
+        return self._data_cols_idxs
 
     def set_wanted_label(self, wanted_label):
+        if self._origin_label is None:
+            self._origin_label = wanted_label
         self.label = wanted_label
 
     def get_wanted_label(self):
         return self.label
 
-    def init_data(self, wanted_label: str, split_control: bool = None, split_tt=True):
+    def init_data(self, wanted_label: str, split_control: bool = None, split_tt=True, tt_split_type=None):
         self.set_wanted_label(wanted_label)
         split_control = self.split_control if split_control is None else split_control
 
@@ -60,7 +72,7 @@ class GmapRunner:
         meta_idx = examples_data.shape[1]
         self.merge_df = merge_df
 
-        merge_df = self.update_tt(split_control)
+        merge_df = self.update_tt(split_control, tt_split_type=tt_split_type)
 
         self.set_data_df(merge_df, meta_idx)
 
@@ -84,26 +96,32 @@ class GmapRunner:
                 name, *subjects_names = line.split(",")
                 self._data_sep[name] = subjects_names
 
-    def set_data_df(self, df, meta_idx, set_train_xy=True):
+    def set_data_df(self, df, meta_idx, set_train_xy=True, wanted_label: str = None, x_meta_names: list = None,
+                    data_idxs=None):
         if self.__original_df is None:
             self.__original_df = df
             self.__original_meta_idx = meta_idx
 
         self.merge_df = df
         self.meta_idx = meta_idx
+        self._data_cols_idxs = data_idxs if data_idxs is not None else self.data_cols_idxs
 
         if set_train_xy:
-            self.setup_xy_train()
+            self.setup_xy_train(wanted_label=wanted_label, data_names=x_meta_names)
 
     def reset_data_df(self):
         """
         Restore original df with training data
         """
+        self.set_wanted_label(self._origin_label)
         self.set_data_df(self.__original_df, self.__original_meta_idx)
+        self._data_cols_idxs = None
         self.setup_xy_train()
 
     def get_data(self, remove_meta=False):
         if remove_meta:
+            if self._data_cols_idxs is not None:
+                return self.merge_df.iloc[:, self.data_cols_idxs]
             return self.merge_df.iloc[:, :self.meta_idx]
 
         return self.merge_df
@@ -111,17 +129,29 @@ class GmapRunner:
     def get_meta_idx(self):
         return self.meta_idx
 
-    def update_tt(self, split_control=None, train_ratio=None):
+    def update_tt(self, split_control=None, train_ratio=None, tt_split_type='record_id'):
         """
         Add tt division for the given dataframe with ratio. group by record_id to make sure same baby won't be both in train and test.
         """
+
         split_control = split_control if split_control is not None else self.split_control
         train_ratio = train_ratio if train_ratio is not None else self.train_ratio
-        self.merge_df = self.merge_df.groupby(['is_control', 'record_id']).apply(
-            lambda x: split_train_test(x, split_control, train_ratio)).reset_index(drop=True)
+        if tt_split_type is None or tt_split_type == 'record_id':
+            self.merge_df = self.merge_df.groupby(['is_control', 'record_id']).apply(
+                lambda x: split_train_test(x, split_control, train_ratio)).reset_index(drop=True)
+        elif tt_split_type == 'symptoms':
+            self.merge_df['tt'] = np.nan
+            for symptom in self.merge_df.symptoms.unique():
+                num_elems = len(self.merge_df[self.merge_df.symptoms == symptom])
+                rand_vals = np.random.rand(num_elems)
+                perc = np.percentile(rand_vals, train_ratio * 100)
+                tt_map = rand_vals>perc
+                tt = ['test' if is_test else 'train' for is_test in tt_map]
+                self.merge_df.loc[self.merge_df.symptoms == symptom, 'tt'] = tt
+            self.merge_df.groupby(['symptoms']).apply(lambda x: np.random.rand(len(x)))
         return self.merge_df
 
-    def update_merge_df(self, rows_map, split_tt=False):
+    def update_merge_df(self, rows_map, split_tt=False, tt_split_type=None):
         """
 
         Args:
@@ -134,7 +164,7 @@ class GmapRunner:
         self.merge_df = self.merge_df.loc[rows_map]
 
         if split_tt:
-            self.update_tt()
+            self.update_tt(tt_split_type=tt_split_type)
 
         return self.merge_df
 
@@ -176,12 +206,9 @@ class GmapRunner:
         fig = px.scatter_3d(embedded_X, x='x', y='y', z='z', color=col)
         return fig
 
-    def get_tain_data(self, copy=False, wanted_label=None):
-        if self._train_X is None:
-            self.setup_xy_train(wanted_label)
-        if wanted_label is not None:
-            # self.set_wanted_label(wanted_label)
-            self.setup_xy_train(wanted_label)
+    def get_train_data(self, copy=False, wanted_label=None, x_meta_names: list = None):
+        if self._train_X is None or wanted_label is not None or x_meta_names is not None:
+            self.setup_xy_train(wanted_label, data_names=x_meta_names)
         if not copy:
             return self._train_X, self._train_y
         x_train = self._train_X.copy()
@@ -195,7 +222,7 @@ class GmapRunner:
             self._train_y = y
 
     def add_training_noise(self, noise_type, add_data=True, **kwargs):
-        X, y = self.get_tain_data(copy=True)
+        X, y = self.get_train_data(copy=True)
         if noise_type == 'normal':
             noise = np.random.normal(**kwargs, size=X.shape)
             X = (X + noise)
@@ -226,15 +253,48 @@ class GmapRunner:
             self._train_X = X
             self._train_y = y
 
-    def setup_xy_train(self, wanted_label=None):
-        label = wanted_label if wanted_label is not None else self.label
+    def setup_xy_train(self, wanted_label=None, data_names: list = None):
+        if wanted_label is not None:
+            label = wanted_label
+            self.set_wanted_label(label)
+        else:
+            label = self.get_wanted_label()
         meta_idx = self.get_meta_idx()
         merge_df = self.get_data()
         assert 'tt' in merge_df, "Must first split to tt before using this function"
         train_df = merge_df[merge_df.tt == 'train']
-        train_X = train_df.iloc[:, :meta_idx].values
+        train_X = train_df.iloc[:, :meta_idx]
         train_y = train_df[label]
+
+        if data_names is not None:
+            self.data_names = data_names
+            # meta_data = train_df.loc[:, data_names]
+            self._data_cols_idxs = list(range(meta_idx)) + [merge_df.columns.tolist().index(name) for name in
+                                                            data_names]
+            train_X = train_df.iloc[:, self.data_cols_idxs].values
+        else:
+            train_X = train_X.values
         self.set_train_data(X=train_X, y=train_y)
+
+    def filter_by_abundance(self, threshold=1.0):
+        """
+        Filter columns if their train abundance sum is under the given threshold
+        Args:
+            threshold: Filter features with abundance lower than threshold
+
+        Returns:
+
+        """
+        meta_idx = self.get_meta_idx()
+        merge_df = self.get_data()
+        assert 'tt' in merge_df, "Must first split to tt before using this function"
+        train_df = merge_df[merge_df.tt == 'train']
+        train_X = train_df.iloc[:, :meta_idx]
+        over_threshold = np.where(train_X.sum(axis=0).astype(int) > threshold)[0]
+        filt_cols_idxs = np.concatenate([over_threshold, np.arange(self.meta_idx, merge_df.shape[1])])
+        filtered_df = merge_df.iloc[:, filt_cols_idxs]
+        self.set_data_df(filtered_df, len(over_threshold), True, self.get_wanted_label(), self.data_names,
+                         np.arange(len(over_threshold)))
 
     def interpulate_group(self, group_df, num_extra_samples=1, interp_interval=0.1, kind='cubic'):
         meta_idx = self.get_meta_idx()
@@ -260,6 +320,7 @@ class GmapRunner:
         inter_df = pd.DataFrame(interp_data.round(3))
         inter_df.columns = group_df.iloc[:, :meta_idx].columns
         inter_df['visit_age_mo'] = ynew
+        inter_df['symptoms'] = group_df.symptoms.tolist()[0]
 
         new_interpulation_rows_df = inter_df[
             ~inter_df.visit_age_mo.isin(group_df.visit_age_mo)]  # remove original values
@@ -267,7 +328,6 @@ class GmapRunner:
         group_df['source'] = 'data'
         res_df = pd.concat([new_interpulation_rows_df, group_df])
         res_df = res_df.sort_values(['visit_age_mo']).reset_index(drop=True)
-
         final_df = self.extract_equale_interval_samples(num_extra_samples, res_df)
 
         # self.draw_interp_results(final_df)
@@ -305,4 +365,3 @@ class GmapRunner:
         plot = plt.plot(df.visit_age_mo, data_np[:, 0], 'ro-', orig_data_full.visit_age_mo, orig_data_np[:, 0], 'b-')
         plt.show()
         print()
-

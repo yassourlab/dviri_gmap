@@ -1,6 +1,6 @@
 # %%
 from typing import Callable, Union, Optional
-
+from plotly.subplots import make_subplots
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -9,6 +9,7 @@ import plotly.figure_factory as ff
 import plotly.graph_objects as go
 from loguru import logger
 from sklearn import linear_model
+from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import accuracy_score
@@ -16,7 +17,7 @@ from dataclasses import dataclass, InitVar, field
 # from pydantic.dataclasses import dataclass
 from pydantic import BaseModel
 from gmap_runner import GmapRunner
-
+from sklearn.tree import export_graphviz
 # from consts import (best_clf_params, DEFAULT_ST_SORTED_ARRAY, META_PATH,
 #                              norm_l7_path, l7_path
 #  )
@@ -43,7 +44,7 @@ class TopFeatures:
     sorted_importance:Optional[np.ndarray] = field(init=False)
 
     def __post_init__(self, importance, indices):
-        self.sorted_features = importance[indices]
+        self.sorted_importance = importance[indices]
 
     class Config:
         arbitrary_types_allowed = True
@@ -70,12 +71,34 @@ class MyTreeModel:
         self._top_features = TopFeatures(importance, indices, features)
         return top_features.tolist()
 
+    def get_tree_depth(self, plot_depth=False):
+        estimators = self.model.estimators_
+        depths = np.array([estimator.tree_.max_depth for estimator in estimators])
+        if plot_depth:
+            fig = px.box(y=depths, points="all")
+            return fig
+        return depths
+
+    def plot_trees(self, n_trees=1):
+        fn = self.runner.get_data(True).columns.tolist()
+        cn = self.runner.get_data(False)[self.runner.get_wanted_label()].tolist()
+        rows = cols = int(np.ceil(np.sqrt(n_trees)))
+        fig, axes = plt.subplots(nrows=rows,ncols = cols, figsize = (20,20), dpi=900)
+        # fill_row = 0
+        # for i in range(n_trees):
+        tree.plot_tree(
+            self.model.estimators_[n_trees],
+            feature_names = fn,
+            class_names = cn,
+            # ax = axes[fill_row//rows,i%rows]
+
+        )
 
 class ClassificationRunner(MyTreeModel):
-    best_params = {'random_state': 666,
+    BEST_PARAMS = {'random_state': 666,
                    'n_estimators': 1200,
-                   'min_samples_split': 20,
-                   'min_samples_leaf': 2,
+                   'min_samples_split': 10,
+                   'min_samples_leaf': 6,
                    #  'max_features': 'sqrt',
                    'max_depth': None,
                    'bootstrap': False}
@@ -86,20 +109,34 @@ class ClassificationRunner(MyTreeModel):
         self.noise_func = None
         self.acc = dict()
         self.loss = dict()
-        self.wanted_label = 'sample_time'
+        self._best_params = ClassificationRunner.BEST_PARAMS
+
+    @property
+    def best_params(self):
+        return self._best_params
+
+    def set_params_default(self):
+        self._best_params = ClassificationRunner.BEST_PARAMS.copy()
+
+    def update_best_params(self,params_dict:dict):
+        self._best_params.update(params_dict)
+
+    @property
+    def wanted_label(self):
+        return self.runner.get_wanted_label()
         # self.setup_training_data()
 
     # def foo(self,x):
     #     if len(x) > 1:
     #         print('wow')
     # def get_
-    def predict(self, wanted_label: str = None, dropna=True):
+    def predict(self, wanted_label: str = None, dropna=True, verbose=False):
         """ Train and predict on a regression model with the regress_params.
         Add the columns predict,label,loss to the dataframe and return it.
         """
         runner = self.runner
+        X, y = runner.get_train_data(wanted_label=wanted_label)
         wanted_label = self.wanted_label if wanted_label is None else wanted_label
-        X, y = runner.get_tain_data(wanted_label=wanted_label)
 
         meta_idx = runner.get_meta_idx()
         merge_df = runner.get_data()
@@ -111,11 +148,13 @@ class ClassificationRunner(MyTreeModel):
             merge_df = merge_df.dropna(subset=[wanted_label], inplace=False)
 
         model = RandomForestClassifier(**self.best_params)
-        logger.info(f"Fitting model to {X.shape} examples")
+        if verbose:
+            logger.info(f"Fitting model to {X.shape} examples")
         model.fit(X, y)
 
+        data_idxs = runner.data_cols_idxs
         merged_training_df = merge_df
-        predict_data = merged_training_df.iloc[:, :meta_idx].values
+        predict_data = merged_training_df.iloc[:, data_idxs].values
         predict = model.predict(predict_data)
         label = merged_training_df[wanted_label]
 
@@ -124,16 +163,40 @@ class ClassificationRunner(MyTreeModel):
         self.model = model
         return self.merged_predict_df
 
-    def calc_loss(self, verbose=True):
-        merged_predict_df = self.merged_predict_df
+    def calc_loss(self,merged_predict_df=None, verbose=True, divide_by_class = False):
+        merged_predict_df = self.merged_predict_df if merged_predict_df is None else merged_predict_df
         for tt in ['train', 'test']:
             df = merged_predict_df[merged_predict_df.tt == tt]
-            label = df.label
-            predict = df.predict
-            accuracy = accuracy_score(label, predict)
+
+            if divide_by_class:
+                classes_arr = df[self.wanted_label].unique().tolist()
+                class_acc_list = list()
+                for cls in classes_arr:
+                    cdf = df[df[self.wanted_label] == cls]
+                    label = cdf.label
+                    predict = cdf.predict
+                    class_acc = accuracy_score(label, predict)
+                    if verbose:
+                        logger.info(f"{tt}:{cls} acc {class_acc}")
+                    normed_accuracy = class_acc/len(classes_arr)  #normalize to be proportional to num of classes
+                    class_acc_list.append(normed_accuracy)
+                accuracy = sum(class_acc_list)
+            else:
+                label = df.label
+                predict = df.predict
+                accuracy = accuracy_score(label, predict)
             self.acc[tt] = accuracy
             if verbose:
-                logger.info(f"{tt} acc, loss: {self.acc[tt]}\t ")
+                logger.info(f"{tt} acc, loss: {self.acc[tt]}\t\n ")
+        return self.acc
+
+    def get_random_loss(self, divide_by_class = False):
+        wanted_label = self.runner.get_wanted_label()
+        logger.info(f"Random loss for label {wanted_label}")
+        func = self.get_classification_random_function(wanted_label)
+        merged_predict_df = self.merged_predict_df.copy()
+        merged_predict_df.predict = func(len(merged_predict_df))
+        self.calc_loss(merged_predict_df, divide_by_class = divide_by_class)
 
     def get_classifier_accuracy(self, merge_df_tt, return_all=False):
         """get Classification classifier accuracy by training on the given dataframe.
@@ -168,16 +231,56 @@ class ClassificationRunner(MyTreeModel):
 
         return train_acc, test_acc
 
-    def plot_confusion_matrix(self, *args, **kwargs):
-        ct, cnt = self.get_confusion_matrix(*args, **kwargs)
+    def plot_confusion_matrix(self, round_n = 3,text_size=9, classes_arr=None, *args, **kwargs):
+        # count_np, name, precentage_np, tbl, title = None, add_title = True, text_size = 18
+        # count_np, name, precentage_np, ct, title = '', add_title = False
+        ct, cnt = self.get_confusion_matrix(classes_arr=classes_arr, *args, **kwargs)
+        # c = 'brwnyl'
+        # ct = ct.round(3)
+        # fig = ff.create_annotated_heatmap(ct.to_numpy().T, x=ct.columns.tolist(), y=ct.columns.tolist(), colorscale=c)
+        # fig.update_layout(title_text='Confusion Table - Label(rows)/Pred(cols)', font=dict(size=18))
+        # fig['layout']['xaxis']['side'] = 'bottom'
+        # fig.show()
+        # return
+        count_np = cnt.to_numpy().round(round_n)
+        name = f'confusion_matrix_{self.wanted_label}'
+        logger.info(f'matrix name {name}')
+        precentage_np = ct.to_numpy().round(round_n)
         c = 'brwnyl'
-        ct = ct.round(3)
-        fig = ff.create_annotated_heatmap(ct.to_numpy().T, x=ct.columns.tolist(), y=ct.columns.tolist(), colorscale=c)
-        fig.update_layout(title_text='Confusion Table - Label(rows)/Pred(cols)', font=dict(size=18))
-        fig['layout']['xaxis']['side'] = 'bottom'
-        fig.show()
+        x = ct.columns.astype(str).tolist()
+        y = ct.index.astype(str).tolist()
+        fig_base = make_subplots(rows=2, cols=1)
+        zmax = precentage_np.max()
 
-    def get_confusion_matrix(self, classes_arr=None, label_col='kmeans_label',
+        fig_percent = ff.create_annotated_heatmap(
+            precentage_np, x=x, y=y, colorscale=c, zmin=zmax / 2, zmax=zmax)
+        fig_percent['layout']['xaxis']['side'] = 'top'
+        fig_base.append_trace(fig_percent['data'][0], 1, 1)
+        fig_cnt = ff.create_annotated_heatmap(precentage_np, annotation_text=count_np, x=x,
+                                              y=y, colorscale=fig_percent.data[0]['colorscale'], zmin=zmax / 2,
+                                              zmax=zmax,
+                                              zauto=False)
+        fig_cnt['layout']['xaxis']['side'] = 'top'
+        fig_base.append_trace(fig_cnt['data'][0], 2, 1)
+        # Add annotation to the plot
+        annot1 = list(fig_percent.layout.annotations)
+        annot2 = list(fig_cnt.layout.annotations)
+        for k in range(len(annot2)):
+            annot2[k]['xref'] = 'x2'
+            annot2[k]['yref'] = 'y2'
+        fig_base.update_layout(annotations=annot1 + annot2)
+        fig_base['layout']['xaxis']['side'] = 'top'
+        # if add_title:
+        #     if title is not None:
+        #         title_text = f'{name} Model Prediction - Symptoms(rows)/is_sick(cols)'
+        #     else:
+        #         title_text = title
+        #     fig_base.update_layout(title_text)
+
+        fig_base.update_layout(font=dict(size=text_size))
+        return fig_base
+
+    def get_confusion_matrix(self, classes_arr=None, label_col=None,
                              normalize='index', rows_as='label',
                              res_data=None):
         """
@@ -190,7 +293,10 @@ class ClassificationRunner(MyTreeModel):
         #     if classes_arr is None:
         #         classes_arr = ['onemonth', 'twomonth','fourmonth', 'sixmonth', 'ninemonth' , 'oneyear']
         # label_col = 'symptoms'
+        label_col = self.wanted_label if label_col is None else label_col
+
         test_df = self.merged_predict_df.query('tt == "test"')
+
         test_df['pred'] = test_df.predict
         label_col = label_col if label_col is not None else self.wanted_label
         if res_data is None:
@@ -257,11 +363,12 @@ class ClassificationRunner(MyTreeModel):
         cnt = cnt.loc[sorted(cnt, key=classes_arr.index), sorted(cnt, key=classes_arr.index)]
         return ct, cnt
 
-    def plot_classification_scatter(self, labels_mapping):
+    def plot_classification_scatter(self, labels_mapping=None):
         meta_idx = self.runner.get_meta_idx()
-
+        wanted_label = self.runner.get_wanted_label()
         test_df = self.merged_predict_df.query('tt == "test"')
-        X_test = test_df.iloc[:, :meta_idx].values
+        data_idxs = self.runner.data_cols_idxs
+        X_test = test_df.iloc[:, data_idxs].values
         test_pred = test_df.predict.values
         pred_proba = self.model.predict_proba(X_test)
         max_proba = np.max(pred_proba, axis=1)
@@ -269,11 +376,15 @@ class ClassificationRunner(MyTreeModel):
         test_df['pred'] = test_pred
         # px.strip(test_df,x='kmeans_label',y='max_proba')
 
-        test_df.pred = test_df.pred.map(lambda x: labels_mapping[x])
-        test_df.kmeans_label = test_df.kmeans_label.map(lambda x: labels_mapping[x])
-        fig = px.strip(test_df, x='pred', y='max_proba', color='kmeans_label',
+        if labels_mapping is not None:
+            test_df.pred = test_df.pred.map(lambda x: labels_mapping[x])
+            test_df[wanted_label] = test_df[wanted_label].map(lambda x: labels_mapping[x])
+            pred_order = list(labels_mapping.values())
+        else:
+            pred_order = list(test_df[wanted_label].unique())
+        fig = px.strip(test_df, x='pred', y='max_proba', color=wanted_label,
                        custom_data=['sampleID', 'symptoms', 'visit_age_mo'],
-                       category_orders={'pred': list(labels_mapping.values())}
+                       category_orders={'pred':pred_order }
                        )
 
         fig.update_traces(
@@ -286,18 +397,17 @@ class ClassificationRunner(MyTreeModel):
         )
         return fig
 
-    def get_classification_random_function(self, merged_training_df, label_name='sample_time', n_bins=50):
+    def get_classification_random_function(self, label_name='sample_time', n_bins=50):
         meta_idx = self.runner.get_meta_idx
-        X = merged_training_df.iloc[:, :meta_idx].values
+        merged_training_df = self.merged_predict_df
         counts = merged_training_df[label_name].value_counts()
         values = counts.values
         bins = counts.index
         #     values, bins = np.histogram(label, bins=len(np.unique(label))-1)
         prob = values / np.sum(values)
-        #     import ipdb;ipdb.set_trace()
         return lambda size: np.random.choice(bins, size=size, p=prob)
 
-    def cat_to_bin(classes_arr):
+    def cat_to_bin(self,classes_arr):
         return lambda x: 'onemonth' if classes_arr.index(x) < 3 else 'oneyear'
 
 
@@ -341,7 +451,7 @@ class RegressionRunner(MyTreeModel):
         Add the columns predict,label,loss to the dataframe and return it.
         """
         runner = self.runner
-        X, y = runner.get_tain_data()
+        X, y = runner.get_train_data()
 
         meta_idx = runner.get_meta_idx()
         merge_df = runner.get_data()
@@ -618,6 +728,77 @@ def main():
     logger_path = f"./logs/logging_{ts}.log"
     logger.add(logger_path)
     runner = GmapRunner(norm_l6_project, split_control=False, train_ratio=0.8)
+
+    runner = GmapRunner(norm_l6_project, split_control=False, train_ratio=0.8,wanted_label='symptoms')
+    # runner.init_data('symptoms')
+    runner.init_data('symptoms', tt_split_type='symptoms')
+    # runner._init_filter_data(1)
+
+
+
+
+
+
+    runner.reset_data_df()
+    # runner.add_training_noise('interpulate', num_extra_samples=3, interp_interval=0.1)
+    clf_runner = ClassificationRunner(runner)
+    clf_runner.predict()
+    clf_runner.calc_loss()
+    runner.filter_by_abundance(1)
+    clf_runner.predict()
+    clf_runner.calc_loss()
+
+    runner.reset_data_df()
+    clf_runner.set_params_default()
+    clf_runner.predict()
+    clf_runner.calc_loss()
+
+    classes_arr = ['Control','Symptomatic']
+    logger.info("filtering under 6 month")
+    # clf_runner.update_best_params(dict(class_weight = {'Control':0.5, "Pre-symptoms":1, 'Resolved':1, 'Symptomatic':2}))
+    # logger.info("training with visit_ago_mo in data")
+    data_df = runner.get_data()
+    data_df['new_labels'] = data_df.symptoms.map(lambda x: 'Control' if x in ('Control','Resolved') else 'Symptomatic')
+    under_6mo_df = data_df[data_df.visit_age_mo < 6]
+    # runner.set_data_df(under_6mo_df,meta_idx=runner.get_meta_idx(),set_train_xy=True)
+    runner.set_data_df(under_6mo_df, meta_idx=runner.get_meta_idx(), set_train_xy=True, wanted_label='new_labels')
+    # runner.setup_xy_train('symptoms', data_names=['visit_age_mo'])
+    clf_runner.predict()
+    clf_runner.calc_loss()
+    fig = clf_runner.plot_confusion_matrix(classes_arr=classes_arr)
+    fig.update_layout(
+        autosize=False,
+        width=1200,
+        height=300, )
+
+
+    logger.info("Starting clean prediction")
+    runner.reset_data_df()
+    clf_runner.predict()
+    clf_runner.calc_loss()
+
+    classes_arr = ['Control','Pre-symptoms','Symptomatic','Resolved']
+    runner.reset_data_df()
+    clf_runner.set_params_default()
+    clf_runner.update_best_params(
+        dict(class_weight={'Control': 0.7, "Pre-symptoms": 1, 'Resolved': 1, 'Symptomatic': 2}))
+    # logger.info("training with visit_ago_mo in data")
+    runner.setup_xy_train('symptoms', data_names=['visit_age_mo'])
+    clf_runner.predict()
+    clf_runner.calc_loss()
+    # clf_runner.plot_confusion_matrix(classes_arr=classes_arr)
+    clf_runner.get_top_features(5)
+
+    runner.reset_data_df()
+    # logger.info("training with visit_ago_mo in data")
+    runner.setup_xy_train('symptoms', data_names=['visit_age_mo'])
+    clf_runner.predict()
+    clf_runner.calc_loss()
+    print("Done")
+
+
+
+
     runner.init_data('symptoms')
     inter_rand = Randomizer("interp", rand_interp_dict, chance_deactivate=0.1)
     label_noise_rand = Randomizer("label", rand_label_noise_dict, chance_deactivate=0.3)
@@ -626,6 +807,7 @@ def main():
     clf_runner = ClassificationRunner(runner)
     clf_runner.predict()
     clf_runner.calc_loss()
+
 
     meta_df = runner.get_data()
     meta_idx = runner.get_meta_idx()
