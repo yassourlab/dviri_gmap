@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Optional
+from typing import Optional, Union
 
 import numpy as np
 import pandas as pd
@@ -96,18 +96,32 @@ class GmapRunner:
                 name, *subjects_names = line.split(",")
                 self._data_sep[name] = subjects_names
 
-    def set_data_df(self, df, meta_idx, set_train_xy=True, wanted_label: str = None, x_meta_names: list = None,
+    def set_data_df(self, df, meta_idx=None, set_train_xy=True, wanted_label: str = None, x_meta_names: list = None,
                     data_idxs=None):
+        assert meta_idx is not None or data_idxs is not None, "must pass either data_idxs or meta_idx when updating the df"
+        assert meta_idx is None or isinstance(meta_idx, int), "meta_idx must be an int. If you have a list of idx, pass data_idxs"
         if self.__original_df is None:
             self.__original_df = df
             self.__original_meta_idx = meta_idx
 
         self.merge_df = df
-        self.meta_idx = meta_idx
-        self._data_cols_idxs = data_idxs if data_idxs is not None else self.data_cols_idxs
+
+        self.setup_meta_idxs(meta_idx, data_idxs)
+        # self.meta_idx = meta_idx
+        # self._data_cols_idxs = data_idxs if data_idxs is not None else self.data_cols_idxs
 
         if set_train_xy:
-            self.setup_xy_train(wanted_label=wanted_label, data_names=x_meta_names)
+            self.setup_xy_train(wanted_label=wanted_label, data_names=x_meta_names, meta_idx = self.data_cols_idxs)
+
+    def setup_meta_idxs(self, meta_idx=None, data_idxs=None):
+        if meta_idx is not None:
+            self.meta_idx = meta_idx
+            if data_idxs is None:
+                self._data_cols_idxs = list(range(meta_idx))
+
+        if data_idxs is not None:
+            self._data_cols_idxs = data_idxs
+                # self._data_cols_idxs = data_idxs if data_idxs is not None else self.data_cols_idxs
 
     def reset_data_df(self):
         """
@@ -125,6 +139,12 @@ class GmapRunner:
             return self.merge_df.iloc[:, :self.meta_idx]
 
         return self.merge_df
+
+    def get_meta_idx_list(self):
+        if self.data_cols_idxs is None:
+            self._data_cols_idxs = list(range(self.meta_idx))
+
+        return self.data_cols_idxs
 
     def get_meta_idx(self):
         return self.meta_idx
@@ -253,24 +273,24 @@ class GmapRunner:
             self._train_X = X
             self._train_y = y
 
-    def setup_xy_train(self, wanted_label=None, data_names: list = None):
+    def setup_xy_train(self, wanted_label=None, data_names: list = None, meta_idx:Optional[Union[int, list]]=None):
         if wanted_label is not None:
             label = wanted_label
             self.set_wanted_label(label)
         else:
             label = self.get_wanted_label()
-        meta_idx = self.get_meta_idx()
+        meta_idx = meta_idx or self.get_meta_idx_list()
         merge_df = self.get_data()
         assert 'tt' in merge_df, "Must first split to tt before using this function"
         train_df = merge_df[merge_df.tt == 'train']
-        train_X = train_df.iloc[:, :meta_idx]
+        train_X = train_df.iloc[:, meta_idx]
         train_y = train_df[label]
 
         if data_names is not None:
             self.data_names = data_names
             # meta_data = train_df.loc[:, data_names]
-            self._data_cols_idxs = list(range(meta_idx)) + [merge_df.columns.tolist().index(name) for name in
-                                                            data_names]
+            names_idxs = [merge_df.columns.tolist().index(name) for name in data_names]
+            self._data_cols_idxs = meta_idx + [idx for idx in names_idxs if idx not in meta_idx]
             train_X = train_df.iloc[:, self.data_cols_idxs].values
         else:
             train_X = train_X.values
